@@ -15,7 +15,22 @@
   color: #666666;
 }
 
-@mixin footer-font-color {
-  color: #1b2d37;
-  opacity: 0.5;
+@mixin flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
+
+@mixin flex-col {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+@mixin footer-font {
+  font-size: 13px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  opacity: 0.5;
+} 

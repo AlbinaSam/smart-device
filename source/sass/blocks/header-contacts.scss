@@ -11,8 +11,11 @@
   margin-right: 8.5%;
   font-size: 16px;
   line-height: 18px;
-}
 
+  &:last-child {
+    margin-right: 0;
+  }
+}
 
 .header-contacts__item a {
   @include link-mixin;
@@ -46,10 +49,6 @@
   height: 18px;
   left: 7px;
   background-image: url("../../img/phone-call.svg");
-}
-
-.header-contacts__item:last-child {
-  margin-right: 0;
 }
 
 @media (max-width: $tablet-width) {
