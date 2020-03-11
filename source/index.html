@@ -1,13 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <title>Smart device</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Стартовый шаблон</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/PTMono-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/RobotoCondensed-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/RobotoCondensed-Bold.woff2" as="font" crossorigin="anonymous">
 </head>
 <body>
-  <h1>Добро пожаловать в Лигу А.</h1>
+  <div style="display: none">
+    <include src="build/img/sprite.svg"></include>
+  </div>
+  <header class="page-header">
+    <div class="page-header__container">
+      <h1 class="visually-hidden">Компания Smart device - производство и поставка печатных плат</h1>
+      <nav class="page-header__nav main-nav">
+        <a class="main-nav__logo-link">
+          <svg class="main-nav__logo-desk-tab" width="202" height="52">
+            <use xlink:href="#logo-header"></use>
+          </svg>
+          <svg class="main-nav__logo-mobile" width="38" height="38">
+            <use xlink:href="#logo-header-mobile"></use>
+          </svg>
+        </a>
+        <ul class="main-nav__contacts header-contacts">
+          <li class="header-contacts__item header-contacts__item--mail">
+            <a href="mailto:info@sd.ru"><span>info@sd.ru</span></a>
+          </li>
+          <li class="header-contacts__item header-contacts__item--phone">
+            <a href="tel:+74950005252"><span>+7 (495) 000 52 52</span></a>
+          </li>
+        </ul>
+        <a href="#" class="main-nav__callback-button">Заказать звонок</a>
+      </nav>
+      <section class="page-header__intro intro">
+        <h2 class="intro__title">Печатные платы</h2>
+        <p class="intro__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
+        <button class="intro__button intro__button--desk-tab" type="button">Получить бесплатную консультацию</button>
+        <button class="intro__button intro__button--mobile" type="button">Бесплатная консультация</button>
+        <a class="intro__link-down">Скролл вниз</a>
+      </section>
+    </div>
+  </header>
+  <footer class="page-footer">
+    <div class="page-footer__container">
+      <div class="page-footer__top-part">
+        <div class="page-footer__wrapper">
+          <a class="page-footer__logo-link">
+            <svg width="216" height="52">
+              <use xlink:href="#logo-footer"></use>
+            </svg>
+          </a>
+          <span class="page-footer__copyright page-footer__copyright--tab-desk">1999-2018 SD Service Devices</span>
+          <ul class="page-footer__social social-list">
+            <li class="social-list__item"><a href="#">Smart Device на Facebook
+              <svg width="27" height="27">
+                <use xlink:href="#facebook"></use>
+              </svg>
+            </a></li>
+            <li class="social-list__item"><a href="#">Smart Device в Одноклассниках
+              <svg width="27" height="27">
+                <use xlink:href="#ok"></use>
+              </svg>
+            </a></li>
+            <li class="social-list__item"><a href="#">Smart Device в Вконтакте
+              <svg width="27" height="27">
+                <use xlink:href="#vk"></use>
+              </svg>
+            </a></li>
+          </ul>
+        </div>
+        <section class="page-footer__site-map site-map">
+          <h2 class="site-map__title">Разделы сайта</h2>
+          <nav class="site-map__nav">
+            <ul class="site-map__list">
+              <li class="site-map__item"><a href="#">О компании</a></li>
+              <li class="site-map__item"><a href="#">Продукты</a></li>
+              <li class="site-map__item"><a href="#">Производство печатных плат</a></li>
+              <li class="site-map__item"><a href="#">Монтаж печатных плат</a></li>
+            </ul>
+            <ul class="site-map__list">
+              <li class="site-map__item"><a href="#">Комплектующие</a></li>
+              <li class="site-map__item"><a href="#">Доставка</a></li>
+              <li class="site-map__item"><a href="#">Контакты</a></li>
+            </ul>
+          </nav>
+        </section>
+        <section class="page-footer__contacts">
+          <ul class="page-footer__contacts-list footer-contacts">
+            <li class="footer-contacts__item">г. Мытищи, Олимпийский проспект, д.10</li>
+            <li class="footer-contacts__item"><a href="tel:+74955894050">+7 (495) 589-40-50</a></li>
+            <li class="footer-contacts__item"><a href="+79250038767">+7 (925) 003-87-67</a></li>
+            <li class="footer-contacts__item"><a href="+792692608079">+7 (926) 926-080-79</a></li>
+          </ul>
+        </section>
+      </div>
+      <div class="page-footer__bottom-part">
+        <p class="page-footer__copyright">Все права защищены</p>
+        <p class="page-footer__copyright">1999-2018 SD Service Devices</p>
+        <a href="#" class="page-footer__privacy-terms">Условия конфиденциальности</a>
+        <span>Developed by<a href="#">Wow studio</a></span>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

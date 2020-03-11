@@ -1,0 +1,92 @@
+.header-contacts {
+  @include list-mixin;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 50px;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+
+.header-contacts__item {
+  margin-right: 8.5%;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+
+.header-contacts__item a {
+  @include link-mixin;
+  padding-left: 40px;
+  position: relative;
+
+  &:hover,
+  &:focus {
+    color: $blue-color;
+    transition: 0.5s;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.header-contacts__item--mail a::before {
+  width: 19px;
+  height: 14px;
+  top: 2px;
+  left: 0;
+  background-image: url("../../img/envelope.svg");
+}
+
+.header-contacts__item--phone a::before {
+  width: 18px;
+  height: 18px;
+  left: 7px;
+  background-image: url("../../img/phone-call.svg");
+}
+
+.header-contacts__item:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: $tablet-width) {
+  .header-contacts {
+    margin-right: 0;
+  }
+
+  .header-contacts__item {
+    margin-right: 83px;
+  }
+
+  .header-contacts__item a {
+    padding-left: 0;
+  }
+
+  .header-contacts__item--mail a::before {
+    width: 25px;
+    height: 19px;
+    top: 0;
+    left: 0;
+  }
+
+  .header-contacts__item--phone a::before {
+    width: 24px;
+    height: 24px;
+    left: -24px;
+    top: -3px;
+  }
+
+  .header-contacts__item span {
+    display: none;
+  }
+}
+
+
+@media (max-width: $mobile-width) {
+  .header-contacts__item {
+    margin-right: 71px;
+  }
+}
