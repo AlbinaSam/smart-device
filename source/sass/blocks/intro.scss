@@ -40,7 +40,7 @@
 
 .intro__button {
   @include link-mixin;
-  width: 407px;
+  width: 351px;
   padding: 18px 28px;
   margin-left: 90px;
   margin-bottom: 94px;
@@ -115,7 +115,7 @@
   }
 
   .intro__button {
-    width: 379px;
+    width: 323px;
     margin-left: 115px;
     margin-bottom: 0;
   }
@@ -152,8 +152,8 @@
   }
 
   .intro__button {
-    width: 287px;
-    margin-left: 0;
+    width: 231px;
+    margin: 0 auto;
   }
 
   .intro__button--desk-tab {

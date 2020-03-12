@@ -62,13 +62,13 @@
   }
 
   .header-contacts__item a {
-    padding-left: 0;
+    padding: 0;
   }
 
   .header-contacts__item--mail a::before {
     width: 25px;
     height: 19px;
-    top: -11px;
+    top: -2px;
     left: 0;
   }
 
@@ -76,11 +76,11 @@
     width: 24px;
     height: 24px;
     left: -24px;
-    top: -18px;
+    top: -5px;
   }
 
   .header-contacts__item span {
-    display: none;
+    font-size: 0;
   }
 }
 
@@ -89,10 +89,11 @@
     margin-right: 71px;
   }
 
+  .header-contacts__item--mail a::before {
+    top: 0;
+  }
+  
   .header-contacts__item--phone a::before {
-    width: 24px;
-    height: 24px;
-    left: -24px;
-    top: -15px;
+    top: -3px;
   }
 }
