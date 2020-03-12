@@ -82,7 +82,7 @@
 
   &:hover,
   &:focus {
-    opacity: 1;
+    color: $blue-color;;
     transition: 0.5s;
   }
 }
@@ -146,7 +146,7 @@
     line-height: 25px;
 
     &::before {
-      left: 0;
+      left: 2px;
       top: 15px;
     }
   }

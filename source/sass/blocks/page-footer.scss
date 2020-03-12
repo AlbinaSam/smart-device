@@ -1,6 +1,17 @@
 .page-footer {
+  position: relative;
   background-color: #fafafa;
   color: $footer-font-color;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #626962;
+    opacity: 0.2;
+    bottom: 54px;
+  }
 }
 
 .page-footer__container {
@@ -71,6 +82,7 @@
 }
 
 .page-footer__privacy-terms {
+  margin: 0;
   margin-right: auto;
 }
 
@@ -79,7 +91,7 @@
   position: relative;
 
   &:hover::after,
-  &:focus::after{
+  &:focus::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -90,15 +102,15 @@
   }
 }
 
-.page-footer__developer a {
-  display: inline-block;
-  vertical-align: top;
-}
-
 @media (max-width: $tablet-width) {
 
+
+  .page-footer::after {
+    bottom: 68px;
+  }
+
   .page-footer__container {
-    width: 89%;
+    width: 96.4%;
   }
 
   .page-footer__top-part {
@@ -110,8 +122,20 @@
     @include flex-row;
     align-items: center;
     width: 100%;
-    padding: 19px 0 26px;
+    padding: 19px 0 22px;
     margin-right: 0;
+    position: relative;
+
+    &::after {
+      content: "";
+position: absolute;
+width: 130%;
+height: 1px;
+background-color: #626962;
+    opacity: 0.2;
+    bottom: 0;
+left: -60px;
+    }
   }
 
   .page-footer__copyright--tab-desk {
@@ -121,7 +145,7 @@
 
   .page-footer__sections-wrapper {
     width: 100%;
-    padding: 35px 0 33px;
+    padding: 38px 0 33px;
   }
 
   .page-footer__site-map {
@@ -143,8 +167,13 @@
 }
 
 @media (max-width: $mobile-width) {
+
+  .page-footer::after {
+    bottom: 120px;
+  }
+  
   .page-footer__container {
-    width: 89%;
+    width: 90%;
   }
 
   .page-footer__wrapper {
@@ -166,11 +195,23 @@
   }
 
   .page-footer__site-map {
+    position: relative;
     width: 100%;
     margin-right: 0;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 130%;
+height: 1px;
+background-color: #626962;
+    opacity: 0.2;
+    bottom: 0;
+left: -60px;
+    }
   }
 
   .page-footer__contacts {
+    position: relative;
     width: 100%;
   }
 
@@ -178,12 +219,30 @@
     margin-bottom: 27px;
   }
 
+
+
+  .page-footer__show-button {
+    display: block;
+    font-size: 0;
+    border: none;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    right: 0;
+    top: 30px;
+    background-color: transparent;
+    background-image: url("../../img/plus.svg");
+  }
+
   .page-footer__bottom-part {
     @include flex-col;
     align-items: center;
+    padding: 30px 0 26px;
   }
+
 
   .page-footer__privacy-terms {
     margin-right: 0;
+    margin-bottom: 21px;
   }  
 }
