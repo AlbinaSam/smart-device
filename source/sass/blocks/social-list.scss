@@ -11,10 +11,8 @@
   }
 
   &:hover,
-  &:focus {
-    svg {
-      fill: red;
-    }
+  &:focus svg {
+    fill: $blue-color;/*не работает ?? */
   }
 }
 

@@ -1,5 +1,4 @@
 .page-header {
-  max-width: 1920px;
   padding-bottom: 90px;
   background-color: $dark-bg;
   background-image:
@@ -9,6 +8,9 @@
   background-repeat: no-repeat;
   background-position: right 10px top 260px, center top, center top;
   background-size: auto, auto, cover;
+
+margin-bottom: 2870px;
+
 }
 
 @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -21,8 +23,8 @@
 }
 
 .page-header__container {
-  width: 90%;
-  max-width: 1410px;
+  width: 89.5%;
+  max-width: 1411px;
   margin: 0 auto;
 }
 
@@ -38,6 +40,8 @@
       url("../../img/triangles-tablet.png"),
       url("../../img/header-bg-tablet.png");
     background-position: right top 113px, right top, center top;
+
+    margin-bottom: 2904px;
   }
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -50,7 +54,7 @@
   }
 
   .page-header__container {
-    width: 93%;
+    width: 96.4%;
   }
 
   .page-header__nav {
@@ -66,6 +70,8 @@
       url("../../img/triangles-mobile.png"),
       url("../../img/header-bg-mobile.png");
     background-position: right top 90px, right top, center top;
+
+    margin-bottom: 3535px;
   }
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {

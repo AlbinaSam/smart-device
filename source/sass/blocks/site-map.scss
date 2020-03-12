@@ -18,10 +18,12 @@
 }
 
 .site-map__list--left {
-  margin-right: 65px;
+  width: 47%;
+  margin-right: 13%;
 }
 
 .site-map__list--right {
+  width: 40%;
   line-height: 26px;
   letter-spacing: 0.03em;
 }
@@ -29,5 +31,25 @@
 @media (max-width: $tablet-width) {
   .site-map__nav {
     @include flex-col;
+  }
+
+  .site-map__list--left {
+    width: 100%;
+    margin-right: 0;
+  }
+  
+  .site-map__list--right {
+    width: 100%;
+   
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .site-map {
+    padding-top: 29px;
+  }
+
+  .site-map__nav {
+    display: none;
   }
 }

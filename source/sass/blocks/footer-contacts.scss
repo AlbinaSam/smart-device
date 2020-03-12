@@ -12,3 +12,9 @@
 .footer-contacts__show-button {
   display: none;
 }
+
+@media (max-width: $mobile-width) {
+  .footer-contacts {
+    padding: 29px 0 28px;
+  }
+}
