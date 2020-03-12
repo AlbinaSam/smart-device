@@ -1,15 +1,14 @@
 .footer-contacts__list {
-    @include list-mixin;
-    font-size: 15px;
-    line-height: 25px;
-    opacity: 0.5;
+  @include list-mixin;
+  font-size: 15px;
+  line-height: 25px;
+  opacity: 0.5;
 }
 
 .footer-contacts__item a {
-    @include link-mixin;
-   
+  @include link-mixin;
 }
 
 .footer-contacts__show-button {
-    display: none;
+  display: none;
 }

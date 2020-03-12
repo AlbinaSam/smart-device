@@ -7,6 +7,7 @@
 @mixin link-mixin {
   text-decoration: none;
   color: inherit;
+  text-align: center;
 }
 
 @mixin font-mixin {
@@ -33,4 +34,4 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   opacity: 0.5;
-} 
+}

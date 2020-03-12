@@ -1,24 +1,24 @@
 .social-list {
-    @include list-mixin;
-    @include flex-row;
+  @include list-mixin;
+  @include flex-row;
 }
 
 .social-list__item {
-    margin-right: 15px;
+  margin-right: 15px;
 
-    &:last-child {
-        margin-right: 0;
-    }
+  &:last-child {
+    margin-right: 0;
+  }
 
-    &:hover,
-    &:focus {
-        svg {
-            fill: red;
-        }
+  &:hover,
+  &:focus {
+    svg {
+      fill: red;
     }
+  }
 }
 
 .social-list__item a {
-    @include link-mixin;
-    font-size: 0;
+  @include link-mixin;
+  font-size: 0;
 }

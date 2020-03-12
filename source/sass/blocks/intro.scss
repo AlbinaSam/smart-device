@@ -39,6 +39,7 @@
 }
 
 .intro__button {
+  @include link-mixin;
   width: 407px;
   padding: 18px 28px;
   margin-left: 90px;
@@ -54,6 +55,13 @@
   color: $white-color;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+
+  &:hover,
+  &:focus {
+    color: $blue-color;
+    background-color: $white-color;
+    transition: 0.5s;
+  }
 }
 
 .intro__button--mobile {
@@ -61,7 +69,8 @@
 }
 
 .intro__link-down {
-  display: inline-block;
+  @include link-mixin;
+  width: 16px;
   vertical-align: top;
 
   font-size: 14px;
@@ -70,6 +79,12 @@
   opacity: 0.5;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+    transition: 0.5s;
+  }
 }
 
 @media (max-width: $tablet-width) {

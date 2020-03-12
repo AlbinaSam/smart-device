@@ -4,6 +4,7 @@
   flex-wrap: wrap;
   margin-right: 50px;
   justify-content: flex-end;
+  align-items: center;
   flex-grow: 1;
 }
 
@@ -19,7 +20,7 @@
 
 .header-contacts__item a {
   @include link-mixin;
-  padding-left: 40px;
+  padding: 10px 0 10px 40px;
   position: relative;
 
   &:hover,
@@ -39,7 +40,7 @@
 .header-contacts__item--mail a::before {
   width: 19px;
   height: 14px;
-  top: 2px;
+  top: 11px;
   left: 0;
   background-image: url("../../img/envelope.svg");
 }
@@ -67,7 +68,7 @@
   .header-contacts__item--mail a::before {
     width: 25px;
     height: 19px;
-    top: 0;
+    top: -11px;
     left: 0;
   }
 
@@ -75,7 +76,7 @@
     width: 24px;
     height: 24px;
     left: -24px;
-    top: -3px;
+    top: -18px;
   }
 
   .header-contacts__item span {
@@ -83,9 +84,15 @@
   }
 }
 
-
 @media (max-width: $mobile-width) {
   .header-contacts__item {
     margin-right: 71px;
+  }
+
+  .header-contacts__item--phone a::before {
+    width: 24px;
+    height: 24px;
+    left: -24px;
+    top: -15px;
   }
 }

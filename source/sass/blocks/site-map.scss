@@ -1,33 +1,33 @@
 .site-map__nav {
-    @include flex-row;
+  @include flex-row;
 }
 
 .site-map__show-button {
-    display: none;
+  display: none;
 }
 
 .site-map__list {
-    @include list-mixin;
-    font-size: 15px;
-    line-height: 25px;
-    opacity: 0.5;
+  @include list-mixin;
+  font-size: 15px;
+  line-height: 25px;
+  opacity: 0.5;
 }
 
 .site-map__item a {
-    @include link-mixin;
-} 
+  @include link-mixin;
+}
 
 .site-map__list--left {
-    margin-right: 65px;
+  margin-right: 65px;
 }
 
 .site-map__list--right {
-    line-height: 26px;
-    letter-spacing: 0.03em;
+  line-height: 26px;
+  letter-spacing: 0.03em;
 }
 
-@media (max-width: $tablet-width)  {
-    .site-map__nav {
-      @include flex-col;
-    }
+@media (max-width: $tablet-width) {
+  .site-map__nav {
+    @include flex-col;
+  }
 }
