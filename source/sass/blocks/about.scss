@@ -1,0 +1,156 @@
+.about {
+  width: 89.5%;
+  max-width: 1411px;
+  margin: 0 auto;
+  padding-bottom: 110px;
+}
+
+.about__container {
+  @include flex-col;
+  position: relative;
+  box-sizing: border-box;
+  width: 82.7%;
+  margin: 0 auto;
+  padding-left: 178px;
+  color: #666666;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -32px;
+    top: 4px;
+    width: 178px;
+    height: 317px;
+    background-image: url("../../img/year.png");
+    background-repeat: no-repeat;
+    
+  }
+}
+
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .about__container::before {
+    background-image: url("../../img/year@2x.png.png");
+  }
+}
+
+
+
+.about__title {
+  margin: 0;
+  margin-bottom: 21px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+}
+
+.about__text {
+  max-height: 152px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.about__text p {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 22px;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.about__button {
+  @include link-mixin;
+  @include button-mixin;
+  width: 180px;
+  box-sizing: border-box;
+  margin-top: 39px;
+  color: $blue-color;
+  border-color: $blue-color;
+
+  
+  &:hover,
+  &:focus {
+    background-color: $blue-color;
+    color: $white-color;
+    transition: 0.5s;
+  }
+}
+
+@media (max-width: $tablet-width) {
+
+  .about {
+    width: 96.4%;
+    padding-bottom: 80px;
+  }
+  
+  .about__container {
+    width: 100%;
+    padding-left: 189px;
+  
+    &::before {
+      content: "";
+      left: -26px;
+      top: -2px;
+      width: 189px;
+      height: 361px;
+      background-image: url("../../img/year-tablet.png");
+    }
+  }
+  
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .about__container::before {
+      background-image: url("../../img/year-tablet@2x.png@2x.png.png");
+    }
+  }
+
+  .about__title {
+    margin-bottom: 24px;
+    font-size: 32px;
+    line-height: 45px;
+  }
+  
+  .about__text {
+    max-height: 200px;
+  }
+
+  .about__button {
+    margin-top: 37px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .about {
+    width: 90%;
+    padding-bottom: 65px;
+  }
+  
+  .about__container {
+    padding-left: 0;
+  
+    &::before {
+      display: none;
+    }
+  }
+
+  .about__title {
+    margin-bottom: 22px;
+    font-size: 28px;
+    line-height: 39px;
+  }
+  
+  .about__text {
+    max-height: 350px;
+  }
+
+  .about__text p {
+   
+    margin-bottom: 40px;
+  }
+
+  .about__button {
+    margin-top: 25px;
+  }
+}

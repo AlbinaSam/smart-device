@@ -11,12 +11,13 @@
 @import "blocks/site-map.scss";
 @import "blocks/footer-contacts.scss";
 @import "blocks/advantages.scss";
+@import "blocks/about.scss";
 
 body {
   min-width: 320px;
   font-family: "PT Mono", "Courier", monospace;
 
-/* background-image: url(../img/шапка.jpg);
+  /*background-image: url(../img/шапка.jpg);
   background-repeat: no-repeat;
   background-position: top center;
   opacity: 0.5;*/

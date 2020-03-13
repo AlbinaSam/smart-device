@@ -3,6 +3,10 @@
   @include flex-row;
 }
 
+.social-list__item svg {
+  fill: #cdcdcd;
+}
+
 .social-list__item {
   margin-right: 15px;
 
@@ -10,9 +14,10 @@
     margin-right: 0;
   }
 
-  &:hover,
+  &:hover svg,
   &:focus svg {
-    fill: $blue-color;/*не работает ?? */
+    fill: $blue-color;
+    transition: 0.5s;
   }
 }
 
@@ -20,3 +25,4 @@
   @include link-mixin;
   font-size: 0;
 }
+

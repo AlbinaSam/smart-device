@@ -2,15 +2,12 @@
   padding-bottom: 90px;
   background-color: $dark-bg;
   background-image:
-    url("../../img/circuit-board-desk.png"),
+   url("../../img/circuit-board-desk.png"),
     url("../../img/triangles-desk.png"),
     url("../../img/header-bg-desk.png");
   background-repeat: no-repeat;
-  background-position: right 10px top 260px, center top, center top;
+  background-position: calc(59% + 352px) 256px, center top, center top;
   background-size: auto, auto, cover;
-
-margin-bottom: 2870px;
-
 }
 
 @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -26,11 +23,13 @@ margin-bottom: 2870px;
   width: 89.5%;
   max-width: 1411px;
   margin: 0 auto;
+  
 }
 
 .page-header__nav {
   margin-bottom: 225px;
 }
+
 
 @media (max-width: $tablet-width) {
   .page-header {
@@ -40,8 +39,6 @@ margin-bottom: 2870px;
       url("../../img/triangles-tablet.png"),
       url("../../img/header-bg-tablet.png");
     background-position: right top 113px, right top, center top;
-
-    margin-bottom: 2904px;
   }
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -70,8 +67,6 @@ margin-bottom: 2870px;
       url("../../img/triangles-mobile.png"),
       url("../../img/header-bg-mobile.png");
     background-position: right top 90px, right top, center top;
-
-    margin-bottom: 3538px;
   }
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {

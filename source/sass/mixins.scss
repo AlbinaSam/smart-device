@@ -35,3 +35,15 @@
   text-transform: uppercase;
   opacity: 0.5;
 }
+
+@mixin button-mixin {
+  padding: 14px 27px 14px 26px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1px solid $white-color;
+  border-radius: 5px;
+}

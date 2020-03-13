@@ -2,10 +2,6 @@
   @include flex-row;
 }
 
-.site-map__show-button {
-  display: none;
-}
-
 .site-map__list {
   @include list-mixin;
   font-size: 15px;
@@ -40,7 +36,6 @@
   
   .site-map__list--right {
     width: 100%;
-   
   }
 }
 

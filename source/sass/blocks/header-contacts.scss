@@ -2,10 +2,10 @@
   @include list-mixin;
   display: flex;
   flex-wrap: wrap;
-  margin-right: 50px;
   justify-content: flex-end;
   align-items: center;
   flex-grow: 1;
+  margin-right: 50px;
 }
 
 .header-contacts__item {
@@ -20,8 +20,8 @@
 
 .header-contacts__item a {
   @include link-mixin;
-  padding: 10px 0 10px 40px;
   position: relative;
+  padding: 10px 0 10px 40px;
 
   &:hover,
   &:focus {
@@ -38,17 +38,17 @@
 }
 
 .header-contacts__item--mail a::before {
-  width: 19px;
-  height: 14px;
   top: 11px;
   left: 0;
+  width: 19px;
+  height: 14px;
   background-image: url("../../img/envelope.svg");
 }
 
 .header-contacts__item--phone a::before {
+  left: 7px;
   width: 18px;
   height: 18px;
-  left: 7px;
   background-image: url("../../img/phone-call.svg");
 }
 
@@ -66,17 +66,17 @@
   }
 
   .header-contacts__item--mail a::before {
-    width: 25px;
-    height: 19px;
     top: -2px;
     left: 0;
+    width: 25px;
+    height: 19px;
   }
 
   .header-contacts__item--phone a::before {
-    width: 24px;
-    height: 24px;
     left: -24px;
     top: -5px;
+    width: 24px;
+    height: 24px;
   }
 
   .header-contacts__item span {
