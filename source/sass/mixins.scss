@@ -47,3 +47,12 @@
   border: 1px solid $white-color;
   border-radius: 5px;
 }
+
+@mixin title-mixin-desk {
+  margin: 0;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+}

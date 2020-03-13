@@ -36,12 +36,8 @@
 
 
 .about__title {
-  margin: 0;
+  @include title-mixin-desk;
   margin-bottom: 21px;
-  font-family: "Roboto Condensed", "Arial", sans-serif;
-  font-weight: normal;
-  font-size: 36px;
-  line-height: 51px;
 }
 
 .about__text {
@@ -83,7 +79,7 @@
 
   .about {
     width: 96.4%;
-    padding-bottom: 80px;
+    padding-bottom: 83px;
   }
   
   .about__container {

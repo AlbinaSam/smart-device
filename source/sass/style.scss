@@ -12,15 +12,16 @@
 @import "blocks/footer-contacts.scss";
 @import "blocks/advantages.scss";
 @import "blocks/about.scss";
+@import "blocks/goods.scss";
 
 body {
   min-width: 320px;
   font-family: "PT Mono", "Courier", monospace;
 
-  /*background-image: url(../img/шапка.jpg);
+  background-image: url(../img/шапка-mobile.jpg);
   background-repeat: no-repeat;
   background-position: top center;
-  opacity: 0.5;*/
+  opacity: 0.5;
 }
 
 img {

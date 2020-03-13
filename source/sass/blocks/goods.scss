@@ -1,0 +1,149 @@
+.goods {
+  padding: 87px 0 127px;
+  background-color: #1b2d37;
+  color: $white-color;
+}
+
+.goods__container {
+  width: 73.8%;
+  margin: 0 auto;
+}
+
+.goods__title {
+  @include title-mixin-desk;
+  margin-bottom: 52px;
+}
+
+.goods__list {
+  @include list-mixin;
+  @include flex-row;
+}
+
+.goods__item {
+  position: relative;
+  width: 31.6%;
+  margin-right: 2.6%;
+ 
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+
+.goods__item-link {
+  @include link-mixin;
+  box-sizing: border-box;
+  display: block;
+  min-height: 620px;
+  padding-top: 50px;
+  padding-left: 42px;
+  text-align: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 63px;
+    height: 63px;
+    background-color: $blue-color;
+    background-image: url("../../img/white-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.goods__item--production a {
+  background-image: url("../../img/product1-desk.png");
+}
+
+.goods__item--assembling a {
+  background-image: url("../../img/product2-desk.png");
+}
+
+.goods__item--components a {
+  background-image: url("../../img/product3-desk.png");
+}
+
+.goods__item-title {
+  width: 165px;
+  margin: 0;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: normal;
+}
+
+@media (max-width: $tablet-width) {
+
+  .goods {
+    padding: 50px 0 30px;
+  }
+
+  .goods__container {
+    width: 96.4%;
+  }
+
+  .goods__title {
+    width: 85.7%;
+    margin-bottom: 50px;
+    font-size: 32px;
+    line-height: 45px;
+  }
+  
+  .goods__list {
+    @include flex-col;
+  }
+
+  .goods__item {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 46px;
+  }
+
+  .goods__item-link {
+    min-height: 256px;
+    padding-top: 40px;
+    padding-left: 46px;
+  }
+
+  .goods__item--production a {
+    background-image: url("../../img/product1-tablet.png");
+  }
+  
+  .goods__item--assembling a {
+    background-image: url("../../img/product2-tablet.png");
+  }
+  
+  .goods__item--components a {
+    background-image: url("../../img/product3-tablet.png");
+  }
+}
+
+@media (max-width: $mobile-width) {
+
+  .goods {
+    padding: 49px 0 35px;
+  }
+
+  .goods__container {
+    width: 90%;
+  }
+  .goods__title {
+    width: 100%;
+    margin-bottom: 43px;
+    font-size: 28px;
+    line-height: 39px;
+  }
+
+  .goods__item {
+    margin-bottom: 30px;
+  }
+
+  .goods__item-link {
+    padding-top: 20px;
+    padding-left: 36px;
+  }
+
+}
