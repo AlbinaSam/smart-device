@@ -1,0 +1,100 @@
+.popup {
+  width: 490px;
+  color: $white-color;
+  background-color: $blue-color;
+}
+
+.popup__wrapper {
+  @include flex-col;
+  width: 411px;
+  margin: 0 auto;
+  padding: 30px 0 38px;
+}
+
+.popup__title {
+  @include title-mixin-desk;
+  margin-bottom: 12px;
+  font-size: 28px;
+  line-height: 39px;
+}
+
+.popup__text {
+  width: 90%;
+  margin: 0;
+  margin-bottom: 32px;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.popup form {
+  @include flex-col;
+}
+
+.popup input[type="text"],
+.popup input[type="tel"] {
+  @include form-element;
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 14px 16px 20px 24px;
+}
+
+.popup textarea {
+  @include form-element;
+  width: 100%;
+  min-height: 104px;
+  margin-bottom: 30px;
+  padding: 14px 16px 20px 24px;
+  resize: none;
+}
+
+.popup button[type="submit"] {
+  @include button-mixin;
+  width: 100%;
+  margin-bottom: 35px;
+  color: $white-color;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    background-color: $white-color;
+    color: $blue-color;
+    transition: 0.5s;
+  }
+}
+
+.popup label[for="popup-consent"] {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 90%;
+  padding-left: 49px;
+  font-size: 14px;
+  line-height: 16px;
+  opacity: 0.8;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 15px;
+    height: 14px;
+    border: 1px solid $white-color;
+  }
+}
+
+.popup input[id="popup-consent"]:checked + label::before {
+  background-image: url("../../img/check-mark.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (max-width: $mobile-width) {
+  .popup {
+    width: 320px;
+  }
+  
+  .popup__wrapper {
+    width: 290px;
+  }
+}

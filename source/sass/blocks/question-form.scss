@@ -1,0 +1,220 @@
+.question-form {
+  color: $white-color;
+  background-color: $blue-color;
+  background-image:
+    url("../../img/airplane.png"),
+    url("../../img/triangles-desk.png");
+  background-repeat: no-repeat;
+  background-size: auto, auto;
+  background-position: calc(77.5% - 650px) 160px, right 686px top -177px;    
+}
+
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .question-form {
+    background-image:
+      url("../../img/airplane@2x.png"),
+      url("../../img/triangles-desk@2x.png");
+    background-size: 511px auto, 1920px auto;
+  } 
+}
+
+.question-form__wrapper {
+  @include flex-col;
+  width: 570px;
+  margin-left: auto;
+  padding: 92px 0 114px;
+}
+
+.question-form__title {
+  @include title-mixin-desk;
+  margin-bottom: 10px;
+}
+
+.question-form__subtitle {
+  margin: 0;
+  margin-bottom: 50px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.question-form form {
+  @include flex-col;
+}
+
+.form__data-row {
+  @include flex-row;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.question-form input[type="text"],
+.question-form input[type="tel"] {
+  @include form-element;
+  width: 270px;
+}
+
+.question-form textarea {
+  @include form-element;
+  width: 100%;
+  min-height: 154px;
+  margin-bottom: 44px;
+  resize: none;
+}
+
+.form__submit-row {
+  @include flex-row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.question-form button[type="submit"] {
+  @include button-mixin;
+  width: 270px;
+  color: $white-color;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    background-color: $white-color;
+    color: $blue-color;
+    transition: 0.5s;
+  }
+}
+
+.question-form label[for="consent"] {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 270px;
+  padding-left: 40px;
+  font-size: 14px;
+  line-height: 16px;
+  opacity: 0.8;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 2px;
+    width: 15px;
+    height: 14px;
+    border: 1px solid $white-color;
+  }
+}
+
+.question-form input[id="consent"]:checked + label::before {
+  background-image: url("../../img/check-mark.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (max-width: $tablet-width) {
+
+  .question-form {
+    background-image: none;
+  }
+  
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .question-form {
+      background-image: none;
+    } 
+  }
+
+  .question-form__wrapper {
+    width: 590px;
+    margin: 0 auto;
+    padding: 82px 0 105px;
+  }
+
+  .question-form__title {
+    margin-bottom: 16px;
+    font-size: 32px;
+    line-height: 45px;
+  }
+  
+  .question-form__subtitle {
+    margin-bottom: 55px;
+  }
+
+  .question-form input[type="text"],
+  .question-form input[type="tel"] {
+    width: 280px;
+  }
+
+  .question-form textarea {
+    min-height: 160px;
+    margin-bottom: 47px;
+  }
+
+  .question-form button[type="submit"] {
+    width: 280px;
+  }
+
+  .question-form label[for="consent"] {
+    width: 280px;
+    padding-left: 45px;
+
+    &::before {
+      content: "";
+      left: 10px;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .question-form__wrapper {
+    width: 290px;
+    padding: 30px 0 43px;
+  }
+
+  .question-form__title {
+    margin-bottom: 13px;
+    font-size: 28px;
+    line-height: 39px;
+  }
+  
+  .question-form__subtitle {
+    margin-bottom: 25px;
+  }
+
+  .form__data-row {
+    @include flex-col;
+    justify-content: flex-start;
+    margin-bottom: 0;
+  }
+
+  .question-form input[type="text"],
+  .question-form input[type="tel"] {
+    width: 100%;
+    margin-bottom: 32px;
+  }
+  .question-form textarea {
+    min-height: 104px;
+    margin-bottom: 32px;
+  }
+
+  .form__submit-row {
+    @include flex-col;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .question-form button[type="submit"] {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .question-form label[for="consent"] {
+    width: 100%;
+  }
+
+  .question-form label[for="consent"] {
+    padding-left: 33px;
+
+    &::before {
+      content: "";
+      left: 0;
+    }
+  }
+}

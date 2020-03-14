@@ -2,7 +2,7 @@
   padding-bottom: 90px;
   background-color: $dark-bg;
   background-image:
-   url("../../img/circuit-board-desk.png"),
+    url("../../img/circuit-board-desk.png"),
     url("../../img/triangles-desk.png"),
     url("../../img/header-bg-desk.png");
   background-repeat: no-repeat;
@@ -16,8 +16,9 @@
       url("../../img/circuit-board-desk@2x.png"),
       url("../../img/triangles-desk@2x.png"),
       url("../../img/header-bg-desk@2x.png");
+    background-size: 705px auto, 1920px auto, cover;
+    } 
   }
-}
 
 .page-header__container {
   width: 89.5%;
@@ -47,7 +48,8 @@
         url("../../img/circuit-board-tablet@2x.png"),
         url("../../img/triangles-tablet@2x.png"),
         url("../../img/header-bg-tablet@2x.png");
-    }
+      background-size: 260px auto, 770px auto, cover;
+    }   
   }
 
   .page-header__container {
@@ -75,6 +77,7 @@
         url("../../img/circuit-board-mobile@2x.png"),
         url("../../img/triangles-mobile@2x.png"),
         url("../../img/header-bg-mobile@2x.png");
+      background-size: 294px auto, 320px auto, cover;
     }
   }
 

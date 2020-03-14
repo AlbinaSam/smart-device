@@ -3,17 +3,9 @@
   margin-bottom: 75px;
 }
 
-.advantages__container {
-  width: 89.5%;
-  max-width: 1411px;
-  margin: 0 auto;
-}
-
 .advantages__list {
   @include list-mixin;
   @include flex-row;
-  width: 82.7%;
-  margin: 0 auto;
 }
 
 .advantages__item {
@@ -61,7 +53,6 @@
 .advantages__item:hover {
   background-color: $blue-color;
   border-color: $blue-color;
-  
   transition: 0.5s;
 }
 
@@ -82,10 +73,6 @@
     margin-bottom: 25px;
   }
 
-  .advantages__container {
-    width: 96.4%;
-  }
-
   .advantages__list {
     width: 100%;
   }
@@ -103,7 +90,6 @@
 
   .advantages__item svg {
     margin-bottom: 7px;
-  
   }
   
   .advantages__item-title {
@@ -115,10 +101,6 @@
   .advantages {
     padding-top: 39px;
     margin-bottom: 36px;
-  }
-
-  .advantages__container {
-    width: 90%;
   }
 
   .advantages__item {
@@ -133,7 +115,6 @@
 
   .advantages__item svg {
     margin-bottom: 12px;
-  
   }
   
   .advantages__item-title {

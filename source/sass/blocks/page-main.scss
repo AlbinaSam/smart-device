@@ -1,0 +1,17 @@
+.page-main__container {
+  width: 73.8%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+@media (max-width: $tablet-width) {
+  .page-main__container {
+    width: 96.4%;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .page-main__container {
+    width: 90%;
+  }
+}

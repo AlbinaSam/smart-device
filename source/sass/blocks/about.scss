@@ -1,7 +1,4 @@
 .about {
-  width: 89.5%;
-  max-width: 1411px;
-  margin: 0 auto;
   padding-bottom: 110px;
 }
 
@@ -9,8 +6,6 @@
   @include flex-col;
   position: relative;
   box-sizing: border-box;
-  width: 82.7%;
-  margin: 0 auto;
   padding-left: 178px;
   color: #666666;
 
@@ -23,17 +18,14 @@
     height: 317px;
     background-image: url("../../img/year.png");
     background-repeat: no-repeat;
-    
   }
 }
 
 @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
   .about__container::before {
-    background-image: url("../../img/year@2x.png.png");
+    background-image: url("../../img/year@2x.png");
   }
 }
-
-
 
 .about__title {
   @include title-mixin-desk;
@@ -66,7 +58,6 @@
   color: $blue-color;
   border-color: $blue-color;
 
-  
   &:hover,
   &:focus {
     background-color: $blue-color;
@@ -78,12 +69,10 @@
 @media (max-width: $tablet-width) {
 
   .about {
-    width: 96.4%;
     padding-bottom: 83px;
   }
   
   .about__container {
-    width: 100%;
     padding-left: 189px;
   
     &::before {
@@ -98,7 +87,7 @@
   
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     .about__container::before {
-      background-image: url("../../img/year-tablet@2x.png@2x.png.png");
+      background-image: url("../../img/year-tablet@2x.png");
     }
   }
 
@@ -119,7 +108,6 @@
 
 @media (max-width: $mobile-width) {
   .about {
-    width: 90%;
     padding-bottom: 65px;
   }
   
@@ -142,7 +130,6 @@
   }
 
   .about__text p {
-   
     margin-bottom: 40px;
   }
 

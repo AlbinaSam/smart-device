@@ -47,7 +47,7 @@
   </header>
   <main class="page-main">
     <section class="advantages" id="advantages">
-      <div class="advantages__container">
+      <div class="page-main__container advantages__container">
         <h2 class="visually-hidden">Наши преимущества</h2>
         <ul class="advantages__list">
           <li class="advantages__item">
@@ -82,78 +82,94 @@
       </div>
     </section>
     <section class="about">
-      <div class="about__container">
-          <h2 class="about__title">О компании</h2>
-          <div class="about__text">
-            <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
-            <p>Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</p>
-          </div>
-          <a href="#" class="about__button">Подробнее</a>
+      <div class="page-main__container about__container">
+        <h2 class="about__title">О компании</h2>
+        <div class="about__text">
+          <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
+          <p>Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</p>
+        </div>
+        <a href="#" class="about__button">Подробнее</a>
       </div>
     </section>
     <section class="goods">
-      <div class="goods__container">
-      <h2 class="goods__title">Service Device предлагает следующие товары и услуги</h2>
-      <ul class="goods__list">
-        <li class="goods__item goods__item--production">
-          <a class="goods__item-link" href="#">
-            <h3 class="goods__item-title">Производство печатных плат</h3>
-          </a>
-        </li>
-        <li class="goods__item goods__item--assembling">
-          <a class="goods__item-link" href="#">
-            <h3 class="goods__item-title">Монтаж печатных плат</h3>
-          </a>
-        </li>
-        <li class="goods__item goods__item--components">
-          <a class="goods__item-link" href="#">
-            <h3 class="goods__item-title">Комплектующие для светотехники</h3>
-          </a>
-        </li>
-      </ul>
-    </div>
+      <div class="page-main__container goods__container">
+        <h2 class="goods__title">Service Device предлагает следующие товары и услуги</h2>
+        <ul class="goods__list">
+          <li class="goods__item goods__item--production">
+            <a href="#">
+              <h3 class="goods__item-title">Производство печатных плат</h3>
+            </a>
+          </li>
+          <li class="goods__item goods__item--assembling">
+            <a href="#">
+              <h3 class="goods__item-title">Монтаж печатных плат</h3>
+            </a>
+          </li>
+          <li class="goods__item goods__item--components">
+            <a href="#">
+              <h3 class="goods__item-title">Комплектующие для светотехники</h3>
+            </a>
+          </li>
+        </ul>
+      </div>
     </section>
     <section class="question-form">
-      <h2 class="question-form__title">Остались вопросы? Задайте их нам</h2>
-      <h3 class="question-form__subtitle">Мы проконсультируем Вас бесплатно</h3>
-      <form class="form">
-        <input type="text" placeholder="Имя" id="name">
-        <label for="name"></label>
-        <input type="tel" placeholder="Телефон" id="tel">
-        <label for="tel"></label>
-      </form>
+      <div class="page-main__container">
+        <div class="question-form__wrapper">
+          <h2 class="question-form__title">Остались вопросы? Задайте их нам!</h2>
+          <h3 class="question-form__subtitle">Мы проконсультируем Вас бесплатно</h3>
+          <form method="" action="">
+            <div class="form__data-row">
+              <div>
+                <input type="text" name="name" placeholder="Имя" id="name" required>
+                <label for="name"></label>
+              </div>
+              <div>
+                <input type="tel" name="tel" placeholder="Телефон" id="tel" required>
+                <label for="tel"></label>
+              </div>
+            </div>
+            <textarea placeholder="Ваш вопрос" required></textarea>
+            <div class="form__submit-row">
+              <button type="submit">Задать вопрос</button>
+              <div>
+                <input class="visually-hidden" type="checkbox" name="consent" id="consent" checked>
+                <label for="consent">Я согласен на обработку персональных данных</label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
     </section>
   </main>
   <footer class="page-footer">
-    <div class="page-footer__top-part">
-      <div class="page-footer__top-container">
-        <div class="page-footer__wrapper">
-          <a class="page-footer__logo-link">
-            <svg width="216" height="52">
-              <use xlink:href="#logo-footer"></use>
-            </svg>
-          </a>
-          <span class="page-footer__copyright--tab-desk">1999-2018 SD Service Devices</span>
-          <ul class="page-footer__social social-list">
-            <li class="social-list__item"><a href="#">Smart Device на Facebook
-              <svg width="27" height="27">
-                <use xlink:href="#facebook"></use>
-              </svg>
-            </a></li>
-            <li class="social-list__item"><a href="#">Smart Device в Одноклассниках
-              <svg width="27" height="27">
-                <use xlink:href="#ok"></use>
-              </svg>
-            </a></li>
-            <li class="social-list__item"><a href="#">Smart Device в Вконтакте
-              <svg width="27" height="27">
-                <use xlink:href="#vk"></use>
-              </svg>
-            </a></li>
-          </ul>
-        </div>
-        <div class="page-footer__sections-wrapper">
-          <section class="page-footer__site-map site-map">
+    <div class="page-footer__top-middle-container">
+      <div class="page-footer__top-part">
+        <a class="page-footer__logo-link">
+          <svg width="216" height="52"><use xlink:href="#logo-footer"></use></svg>
+        </a>
+        <span class="page-footer__copyright--tab-desk">1999-2018 SD Service Devices</span>
+        <ul class="page-footer__social social-list">
+          <li class="social-list__item">
+            <a href="#">Smart Device на Facebook
+              <svg width="27" height="27"><use xlink:href="#facebook"></use></svg>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a href="#">Smart Device в Одноклассниках
+              <svg width="27" height="27"><use xlink:href="#ok"></use></svg>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a href="#">Smart Device в Вконтакте
+              <svg width="27" height="27"><use xlink:href="#vk"></use></svg>
+            </a>
+          </li>
+        </ul>
+     </div>
+     <div class="page-footer__middle-part">
+        <section class="page-footer__site-map site-map">
+          <div class="site-map__wrapper">
             <h2 class="page-footer__title">Разделы сайта</h2>
             <button class="page-footer__show-button site-map__show-button" type="button">Развернуть</button>
             <nav class="site-map__nav">
@@ -169,8 +185,10 @@
                 <li class="site-map__item"><a href="#">Контакты</a></li>
               </ul>
             </nav>
-          </section>
-          <section class="page-footer__contacts footer-contacts">
+          </div>
+        </section>
+        <section class="page-footer__contacts footer-contacts">
+          <div class="footer-contacts__wrapper">
             <h2 class="page-footer__title">Наш офис</h2>
             <button class="page-footer__show-button footer-contacts__show-button" type="button">Развернуть</button>
             <ul class="footer-contacts__list">
@@ -179,8 +197,8 @@
               <li class="footer-contacts__item"><a href="+79250038767">+7 (925) 003-87-67</a></li>
               <li class="footer-contacts__item"><a href="+792692608079">+7 (926) 926-080-79</a></li>
             </ul>
-          </section>
-        </div>
+          </div>
+        </section>
       </div>
     </div>
     <div class="page-footer__bottom-part">
@@ -192,5 +210,29 @@
       </div>
     </div>
   </footer>
+
+<section class="popup">
+  <div class="popup__wrapper">
+    <h2 class="popup__title">Закажите звонок</h2>
+    <p class="popup__text">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+    <form method="" action="">
+      <div>
+        <input type="text" name="name" placeholder="Имя" id="name" required>
+        <label for="name"></label>
+      </div>
+      <div>
+        <input type="tel" name="tel" placeholder="Телефон" id="tel" required>
+        <label for="tel"></label>
+      </div>
+      <textarea placeholder="Ваш вопрос" required></textarea>
+      <button type="submit">Отправить</button>
+      <div>
+        <input class="visually-hidden" type="checkbox" name="popup-consent" id="popup-consent" checked>
+        <label for="popup-consent">Я согласен на обработку персональных данных</label>
+      </div>
+    </form>
+  </div>
+</section>
+
 </body>
 </html>
