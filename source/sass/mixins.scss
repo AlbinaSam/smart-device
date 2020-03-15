@@ -46,6 +46,7 @@
   letter-spacing: 0.05em;
   border: 1px solid $white-color;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 @mixin title-mixin-desk {
@@ -60,6 +61,7 @@
 @mixin form-element {
   box-sizing: border-box;
   padding: 15px 16px 17px 16px;
+  color: $white-color;
   background-color: rgba(255, 255, 255, 0.1);
   border: none;
 

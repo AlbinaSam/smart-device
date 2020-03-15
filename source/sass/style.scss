@@ -22,9 +22,9 @@ body {
   min-width: 320px;
   font-family: "PT Mono", "Courier", monospace;
 
-  /*background-image: url(../img/popup.jpg);
+ /* background-image: url(../img/шапка.jpg);
   background-repeat: no-repeat;
-  background-position: left bottom;
+  background-position: center top;
   opacity: 0.5;*/
 }
 
@@ -47,4 +47,26 @@ input[type="radio"].visually-hidden {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.hidden {
+  display: none;
+}
+
+.body-lock {
+  position: fixed;
+  width: 100%;
+  overflow-y: scroll;
 }

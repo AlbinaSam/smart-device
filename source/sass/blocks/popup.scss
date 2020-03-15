@@ -1,24 +1,44 @@
-.popup {
+.callback-popup {
+  position: fixed;
+  top: 136px;
+  left: 50%;
+  z-index: 11;
   width: 490px;
+  margin-left: -245px; 
   color: $white-color;
   background-color: $blue-color;
 }
 
-.popup__wrapper {
+.callback-popup__wrapper {
   @include flex-col;
+  position: relative;
   width: 411px;
   margin: 0 auto;
   padding: 30px 0 38px;
 }
 
-.popup__title {
+.callback-popup__close-button {
+  position: absolute;
+  right: -20px;
+  top: 20px;
+  width: 17px;
+  height: 17px;
+  background-color: transparent;
+  background-image: url("../../img/cross.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+}
+
+.callback-popup__title {
   @include title-mixin-desk;
   margin-bottom: 12px;
   font-size: 28px;
   line-height: 39px;
 }
 
-.popup__text {
+.callback-popup__text {
   width: 90%;
   margin: 0;
   margin-bottom: 32px;
@@ -26,19 +46,19 @@
   line-height: 22px;
 }
 
-.popup form {
+.callback-popup form {
   @include flex-col;
 }
 
-.popup input[type="text"],
-.popup input[type="tel"] {
+.callback-popup input[type="text"],
+.callback-popup input[type="tel"] {
   @include form-element;
   width: 100%;
   margin-bottom: 30px;
   padding: 14px 16px 20px 24px;
 }
 
-.popup textarea {
+.callback-popup textarea {
   @include form-element;
   width: 100%;
   min-height: 104px;
@@ -47,7 +67,7 @@
   resize: none;
 }
 
-.popup button[type="submit"] {
+.callback-popup button[type="submit"] {
   @include button-mixin;
   width: 100%;
   margin-bottom: 35px;
@@ -62,7 +82,7 @@
   }
 }
 
-.popup label[for="popup-consent"] {
+.callback-popup label[for="popup-consent"] {
   position: relative;
   display: block;
   box-sizing: border-box;
@@ -83,18 +103,8 @@
   }
 }
 
-.popup input[id="popup-consent"]:checked + label::before {
+.callback-popup input[id="popup-consent"]:checked + label::before {
   background-image: url("../../img/check-mark.svg");
   background-repeat: no-repeat;
   background-position: center;
-}
-
-@media (max-width: $mobile-width) {
-  .popup {
-    width: 320px;
-  }
-  
-  .popup__wrapper {
-    width: 290px;
-  }
 }

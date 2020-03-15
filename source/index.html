@@ -39,8 +39,8 @@
       <section class="page-header__intro intro">
         <h2 class="intro__title">Печатные платы</h2>
         <p class="intro__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
-        <a href="#" class="intro__button intro__button--desk-tab">Получить бесплатную консультацию</a>
-        <a href="#" class="intro__button intro__button--mobile">Бесплатная консультация</a>
+        <a href="#question-form" class="intro__button intro__button--desk-tab">Получить бесплатную консультацию</a>
+        <a href="#question-form" class="intro__button intro__button--mobile">Бесплатная консультация</a>
         <a href="#advantages" class="intro__link-down">Скролл вниз</a>
       </section>
     </div>
@@ -113,20 +113,21 @@
         </ul>
       </div>
     </section>
-    <section class="question-form">
+    <section class="question-form" id="question-form">
       <div class="page-main__container">
         <div class="question-form__wrapper">
           <h2 class="question-form__title">Остались вопросы? Задайте их нам!</h2>
           <h3 class="question-form__subtitle">Мы проконсультируем Вас бесплатно</h3>
-          <form method="" action="">
+          <form method="post" action="">
             <div class="form__data-row">
               <div>
-                <input type="text" name="name" placeholder="Имя" id="name" required>
-                <label for="name"></label>
+                <input type="text" name="name" placeholder="Имя" id="question-form-name" required>
+                <label for="question-form-name"></label>
               </div>
               <div>
-                <input type="tel" name="tel" placeholder="Телефон" id="tel" required>
-                <label for="tel"></label>
+                <input type="tel" name="tel" placeholder="Телефон" id="question-form-tel" maxlength="
+                10" required>
+                <label for="question-form-tel"></label>
               </div>
             </div>
             <textarea placeholder="Ваш вопрос" required></textarea>
@@ -172,7 +173,7 @@
           <div class="site-map__wrapper">
             <h2 class="page-footer__title">Разделы сайта</h2>
             <button class="page-footer__show-button site-map__show-button" type="button">Развернуть</button>
-            <nav class="site-map__nav">
+            <nav class="site-map__nav hidden">
               <ul class="site-map__list site-map__list--left">
                 <li class="site-map__item"><a href="#">О компании</a></li>
                 <li class="site-map__item"><a href="#">Продукты</a></li>
@@ -191,7 +192,7 @@
           <div class="footer-contacts__wrapper">
             <h2 class="page-footer__title">Наш офис</h2>
             <button class="page-footer__show-button footer-contacts__show-button" type="button">Развернуть</button>
-            <ul class="footer-contacts__list">
+            <ul class="footer-contacts__list hidden">
               <li class="footer-contacts__item">г. Мытищи, Олимпийский проспект, д.10</li>
               <li class="footer-contacts__item"><a href="tel:+74955894050">+7 (495) 589-40-50</a></li>
               <li class="footer-contacts__item"><a href="+79250038767">+7 (925) 003-87-67</a></li>
@@ -211,18 +212,19 @@
     </div>
   </footer>
 
-<section class="popup">
-  <div class="popup__wrapper">
-    <h2 class="popup__title">Закажите звонок</h2>
-    <p class="popup__text">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-    <form method="" action="">
+<section class="callback-popup hidden">
+  <div class="callback-popup__wrapper">
+    <button class="callback-popup__close-button" type="button" aria-label="Закрыть форму"></button>
+    <h2 class="callback-popup__title">Закажите звонок</h2>
+    <p class="callback-popup__text">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+    <form method="post" action="">
       <div>
-        <input type="text" name="name" placeholder="Имя" id="name" required>
-        <label for="name"></label>
+        <input type="text" name="name" placeholder="Имя" id="callback-popup-name" required>
+        <label for="callback-popup-name"></label>
       </div>
       <div>
-        <input type="tel" name="tel" placeholder="Телефон" id="tel" required>
-        <label for="tel"></label>
+        <input type="tel" name="tel" placeholder="Телефон" id="callback-popup-tel" maxlength="10" required>
+        <label for="callback-popup-tel"></label>
       </div>
       <textarea placeholder="Ваш вопрос" required></textarea>
       <button type="submit">Отправить</button>
@@ -233,6 +235,7 @@
     </form>
   </div>
 </section>
-
+<div class="overlay hidden"></div>
+<script src="js/main.js"></script>
 </body>
 </html>

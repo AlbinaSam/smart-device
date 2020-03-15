@@ -240,11 +240,16 @@
     display: block;
     width: 16px;
     height: 16px;
+    padding: 0;
     font-size: 0;
     border: none;
     background-color: transparent;
     background-image: url("../../img/plus.svg");
     cursor: pointer;
+  }
+
+  .page-footer__close-button {
+    background-image: url("../../img/minus.svg");
   }
 
   .page-footer__bottom-part {

@@ -24,6 +24,7 @@
 @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
   .about__container::before {
     background-image: url("../../img/year@2x.png");
+    background-size: 220px auto;
   }
 }
 
@@ -88,6 +89,7 @@
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     .about__container::before {
       background-image: url("../../img/year-tablet@2x.png");
+      background-size: 244px auto;
     }
   }
 
