@@ -6,7 +6,7 @@
     url("../../img/triangles-desk.png");
   background-repeat: no-repeat;
   background-size: auto, auto;
-  background-position: calc(71% - 650px) 160px, right 855px top -177px;    
+  background-position: calc(71% - 650px) 160px, right 855px top -177px;
 }
 
 @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -15,7 +15,7 @@
       url("../../img/airplane@2x.png"),
       url("../../img/triangles-desk@2x.png");
     background-size: 511px auto, 1920px auto;
-  } 
+  }
 }
 
 .question-form__wrapper {
@@ -80,17 +80,22 @@
     color: $blue-color;
     transition: 0.5s;
   }
+
+  &:active {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
 }
 
 .question-form label[for="consent"] {
   position: relative;
-  display: block;
   box-sizing: border-box;
+  display: block;
   width: 270px;
   padding-left: 40px;
   font-size: 14px;
   line-height: 16px;
   opacity: 0.8;
+  cursor: pointer;
 
   &::before {
     content: "";
@@ -100,6 +105,11 @@
     width: 15px;
     height: 14px;
     border: 1px solid $white-color;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 1;
   }
 }
 
@@ -114,11 +124,11 @@
   .question-form {
     background-image: none;
   }
-  
+
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     .question-form {
       background-image: none;
-    } 
+    }
   }
 
   .question-form__wrapper {
@@ -132,7 +142,7 @@
     font-size: 32px;
     line-height: 45px;
   }
-  
+
   .question-form__subtitle {
     margin-bottom: 55px;
   }
@@ -173,7 +183,7 @@
     font-size: 28px;
     line-height: 39px;
   }
-  
+
   .question-form__subtitle {
     margin-bottom: 25px;
   }

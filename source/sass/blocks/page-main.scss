@@ -1,3 +1,18 @@
+.page-main {
+  background-image:
+    url("../../img/tr-big-left.svg"),
+    url("../../img/tr-big-center.svg"),
+    url("../../img/tr-small-left.svg"),
+    url("../../img/tr-small-right.svg");
+
+    background-repeat: no-repeat;
+    background-position:
+    left top 444px,
+    left 555px top 145px,
+    left 200px top 40px,
+    right 25px top 460px;
+}
+
 .page-main__container {
   width: 73.8%;
   max-width: 1170px;
@@ -5,12 +20,25 @@
 }
 
 @media (max-width: $tablet-width) {
+
+  .page-main {
+    background-image: url("../../img/tr-tablet.svg");
+
+    background-position:
+      right top 90px;
+  }
+
   .page-main__container {
-    width: 96.4%;
+    width: 94%;
   }
 }
 
 @media (max-width: $mobile-width) {
+
+  .page-main {
+    background-image: none;
+  }
+
   .page-main__container {
     width: 90%;
   }

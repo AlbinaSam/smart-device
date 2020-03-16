@@ -1,0 +1,72 @@
+body {
+  min-width: 320px;
+  font-family: "PT Mono", "Courier", monospace;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden,
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.body-lock {
+  position: fixed;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: $mobile-width) {
+
+  .hidden--mobile .site-map__nav {
+    display: none;
+  }
+
+  .opened--mobile .site-map__nav {
+    display: block;
+  }
+
+  .hidden--mobile .footer-contacts__list {
+    display: none;
+  }
+
+  .opened--mobile .footer-contacts__list {
+    display: block;
+  }
+
+  .opened--mobile .page-footer__show-button {
+    display: none;
+  }
+}
+
+

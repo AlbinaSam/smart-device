@@ -6,7 +6,7 @@
     url("../../img/triangles-desk.png"),
     url("../../img/header-bg-desk.png");
   background-repeat: no-repeat;
-  background-position: calc(59% + 352px) 256px, center top, center top;
+  background-position: calc(56.5% + 352px) 256px, center top, center top;
   background-size: auto, auto, cover;
 }
 
@@ -17,20 +17,18 @@
       url("../../img/triangles-desk@2x.png"),
       url("../../img/header-bg-desk@2x.png");
     background-size: 705px auto, 1920px auto, cover;
-    } 
+    }
   }
 
 .page-header__container {
   width: 89.5%;
   max-width: 1411px;
   margin: 0 auto;
-  
 }
 
 .page-header__nav {
   margin-bottom: 225px;
 }
-
 
 @media (max-width: $tablet-width) {
   .page-header {
@@ -49,11 +47,11 @@
         url("../../img/triangles-tablet@2x.png"),
         url("../../img/header-bg-tablet@2x.png");
       background-size: 260px auto, 770px auto, cover;
-    }   
+    }
   }
 
   .page-header__container {
-    width: 96.4%;
+    width: 94%;
   }
 
   .page-header__nav {

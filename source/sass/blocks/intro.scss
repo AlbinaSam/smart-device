@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   flex-direction: column;
   width: 80%;
-  max-width: 718px;
+  max-width: 726px;
   color: $white-color;
 }
 
@@ -43,7 +43,6 @@
   margin-left: 90px;
   margin-bottom: 94px;
   padding: 18px 28px;
-
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: bold;
   font-size: 16px;
@@ -51,7 +50,6 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: $white-color;
-
   background-color: $blue-color;
   border-radius: 5px;
 
@@ -60,6 +58,10 @@
     color: $blue-color;
     background-color: $white-color;
     transition: 0.5s;
+  }
+
+  &:active {
+    background-color: rgba(255, 255, 255, 0.8);
   }
 }
 
@@ -81,6 +83,10 @@
   &:focus {
     color: $blue-color;;
     transition: 0.5s;
+  }
+
+  &:active {
+    color: rgba(0, 178, 255, 0.5);
   }
 }
 

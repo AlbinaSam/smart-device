@@ -19,7 +19,7 @@
   width: 31.6%;
   height: 620px;
   margin-right: 2.6%;
-  
+
   &:nth-child(3n) {
     margin-right: 0;
   }
@@ -85,14 +85,14 @@
   .goods__item--production a::before {
     background-image: url("../../img/product1-desk@2x.png");
   }
-  
+
   .goods__item--assembling a::before {
     background-image: url("../../img/product2-desk@2x.png");
   }
-  
+
   .goods__item--components a::before {
     background-image: url("../../img/product3-desk@2x.png");
- }
+  }
 }
 
 .goods__item-title {
@@ -117,7 +117,7 @@
     font-size: 32px;
     line-height: 45px;
   }
-  
+
   .goods__list {
     @include flex-col;
   }
@@ -142,11 +142,11 @@
   .goods__item--production a::before {
     background-image: url("../../img/product1-tablet.png");
   }
-  
+
   .goods__item--assembling a::before {
     background-image: url("../../img/product2-tablet.png");
   }
-  
+
   .goods__item--components a::before {
     background-image: url("../../img/product3-tablet.png");
   }
@@ -156,11 +156,11 @@
     .goods__item--production a::before {
       background-image: url("../../img/product1-tablet@2x.png");
     }
-    
+
     .goods__item--assembling a::before {
       background-image: url("../../img/product2-tablet@2x.png");
     }
-    
+
     .goods__item--components a::before {
       background-image: url("../../img/product3-tablet@2x.png");
     }
@@ -192,11 +192,11 @@
   .goods__item--production a::before {
     background-image: url("../../img/product1-mobile.png");
   }
-  
+
   .goods__item--assembling a::before {
     background-image: url("../../img/product2-mobile.png");
   }
-  
+
   .goods__item--components a::before {
     background-image: url("../../img/product3-mobile.png");
   }
@@ -206,11 +206,11 @@
     .goods__item--production a::before {
       background-image: url("../../img/product1-mobile@2x.png");
     }
-    
+
     .goods__item--assembling a::before {
       background-image: url("../../img/product2-mobile@2x.png");
     }
-    
+
     .goods__item--components a::before {
       background-image: url("../../img/product3-mobile@2x.png");
     }

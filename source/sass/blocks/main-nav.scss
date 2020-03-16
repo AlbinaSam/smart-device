@@ -13,12 +13,17 @@
 .main-nav__callback-button {
   @include link-mixin;
   @include button-mixin;
-  
+
   &:hover,
   &:focus {
     background-color: $blue-color;
     border-color: $blue-color;
     transition: 0.5s;
+  }
+
+  &:active {
+    background-color: rgba(0, 178, 255, 0.8);
+    border-color: rgba(0, 178, 255, 0.1);
   }
 }
 

@@ -18,7 +18,7 @@
     <div class="page-header__container">
       <h1 class="visually-hidden">Компания Smart device - производство и поставка печатных плат</h1>
       <nav class="page-header__nav main-nav">
-        <a class="main-nav__logo-link">
+        <a class="main-nav__logo-link" aria-label="Логотип компании Smart Device">
           <svg class="main-nav__logo-desk-tab" width="202" height="52">
             <use xlink:href="#logo-header"></use>
           </svg>
@@ -28,10 +28,10 @@
         </a>
         <ul class="main-nav__contacts header-contacts">
           <li class="header-contacts__item header-contacts__item--mail">
-            <a href="mailto:info@sd.ru"><span>info@sd.ru</span></a>
+            <a href="mailto:info@sd.ru" aria-label="Написать в компанию Smart Device"><span>info@sd.ru</span></a>
           </li>
           <li class="header-contacts__item header-contacts__item--phone">
-            <a href="tel:+74950005252"><span>+7 (495) 000 52 52</span></a>
+            <a href="tel:+74950005252" aria-label="Позвонить в компанию Smart Device"><span>+7 (495) 000 52 52</span></a>
           </li>
         </ul>
         <a href="#" class="main-nav__callback-button">Заказать звонок</a>
@@ -125,8 +125,7 @@
                 <label for="question-form-name"></label>
               </div>
               <div>
-                <input type="tel" name="tel" placeholder="Телефон" id="question-form-tel" maxlength="
-                10" required>
+                <input type="tel" name="tel" placeholder="Телефон" id="question-form-tel" maxlength="16" required>
                 <label for="question-form-tel"></label>
               </div>
             </div>
@@ -146,7 +145,7 @@
   <footer class="page-footer">
     <div class="page-footer__top-middle-container">
       <div class="page-footer__top-part">
-        <a class="page-footer__logo-link">
+        <a class="page-footer__logo-link" aria-label="Логотип компании Smart Device">
           <svg width="216" height="52"><use xlink:href="#logo-footer"></use></svg>
         </a>
         <span class="page-footer__copyright--tab-desk">1999-2018 SD Service Devices</span>
@@ -167,13 +166,13 @@
             </a>
           </li>
         </ul>
-     </div>
-     <div class="page-footer__middle-part">
-        <section class="page-footer__site-map site-map">
+      </div>
+      <div class="page-footer__middle-part">
+        <section class="page-footer__site-map site-map hidden--mobile opened--mobile">
           <div class="site-map__wrapper">
             <h2 class="page-footer__title">Разделы сайта</h2>
             <button class="page-footer__show-button site-map__show-button" type="button">Развернуть</button>
-            <nav class="site-map__nav hidden">
+            <nav class="site-map__nav">
               <ul class="site-map__list site-map__list--left">
                 <li class="site-map__item"><a href="#">О компании</a></li>
                 <li class="site-map__item"><a href="#">Продукты</a></li>
@@ -188,11 +187,11 @@
             </nav>
           </div>
         </section>
-        <section class="page-footer__contacts footer-contacts">
+        <section class="page-footer__contacts footer-contacts hidden--mobile opened--mobile">
           <div class="footer-contacts__wrapper">
             <h2 class="page-footer__title">Наш офис</h2>
             <button class="page-footer__show-button footer-contacts__show-button" type="button">Развернуть</button>
-            <ul class="footer-contacts__list hidden">
+            <ul class="footer-contacts__list">
               <li class="footer-contacts__item">г. Мытищи, Олимпийский проспект, д.10</li>
               <li class="footer-contacts__item"><a href="tel:+74955894050">+7 (495) 589-40-50</a></li>
               <li class="footer-contacts__item"><a href="+79250038767">+7 (925) 003-87-67</a></li>
@@ -223,7 +222,7 @@
         <label for="callback-popup-name"></label>
       </div>
       <div>
-        <input type="tel" name="tel" placeholder="Телефон" id="callback-popup-tel" maxlength="10" required>
+        <input type="tel" name="tel" placeholder="Телефон" id="callback-popup-tel" maxlength="16" required>
         <label for="callback-popup-tel"></label>
       </div>
       <textarea placeholder="Ваш вопрос" required></textarea>
@@ -236,6 +235,7 @@
   </div>
 </section>
 <div class="overlay hidden"></div>
+<script src="js/vendor.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

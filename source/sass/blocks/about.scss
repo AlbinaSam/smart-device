@@ -44,7 +44,7 @@
   margin-bottom: 20px;
   font-size: 16px;
   line-height: 22px;
-  
+
   &:last-child {
     margin-bottom: 0;
   }
@@ -65,6 +65,11 @@
     color: $white-color;
     transition: 0.5s;
   }
+
+  &:active {
+    background-color: rgba(0, 178, 255, 0.8);
+    border-color: rgba(0, 178, 255, 0.1);
+  }
 }
 
 @media (max-width: $tablet-width) {
@@ -72,10 +77,10 @@
   .about {
     padding-bottom: 83px;
   }
-  
+
   .about__container {
     padding-left: 189px;
-  
+
     &::before {
       content: "";
       left: -26px;
@@ -85,7 +90,7 @@
       background-image: url("../../img/year-tablet.png");
     }
   }
-  
+
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     .about__container::before {
       background-image: url("../../img/year-tablet@2x.png");
@@ -98,7 +103,7 @@
     font-size: 32px;
     line-height: 45px;
   }
-  
+
   .about__text {
     max-height: 200px;
   }
@@ -112,10 +117,10 @@
   .about {
     padding-bottom: 65px;
   }
-  
+
   .about__container {
     padding-left: 0;
-  
+
     &::before {
       display: none;
     }
@@ -126,7 +131,7 @@
     font-size: 28px;
     line-height: 39px;
   }
-  
+
   .about__text {
     max-height: 350px;
   }

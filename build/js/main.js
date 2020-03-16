@@ -6,22 +6,37 @@ var ENTER_KEYCODE = 13;
 
 (function () {
 
-  /*открытие и закрытие попапа*/
   var body = document.querySelector('body');
   var overlay = document.querySelector('.overlay');
   var callBackButton = document.querySelector('.main-nav__callback-button');
   var callBackPopup = document.querySelector('.callback-popup');
   var closeButton = callBackPopup.querySelector('.callback-popup__close-button');
-  var inputName = callBackPopup.querySelector('input[name=name]');
-  var inputTel = callBackPopup.querySelector('input[name=tel]');
-  var inputMessage = callBackPopup.querySelector('textarea');
+  var callBackName = callBackPopup.querySelector('input[name=name]');
+  var callBackTel = callBackPopup.querySelector('input[name=tel]');
+  var callBackMessage = callBackPopup.querySelector('textarea');
   var callBackForm = callBackPopup.querySelector('form');
+
+  var questionFormSection = document.querySelector('.question-form');
+  var questionFormTel = questionFormSection.querySelector('input[name=tel]');
 
   var isStorageSupport = true;
   var storageName = '';
   var storageTel = '';
   var storageMessage = '';
 
+  /*маска*/
+  callBackTel.addEventListener('focus', function () {
+    callBackTel.value = '+7(';
+  });
+
+  questionFormTel.addEventListener('focus', function () {
+    questionFormTel.value = '+7(';
+  });
+
+  window.iMaskJS(callBackTel, {mask: '+{7}(000)000-00-00'});
+  window.iMaskJS(questionFormTel, {mask: '+{7}(000)000-00-00'});
+
+  /*плавный скролл*/
   var smoothScroll = function (element) {
     var elementPosition = element.getBoundingClientRect().top;
     window.scrollTo({
@@ -29,31 +44,30 @@ var ENTER_KEYCODE = 13;
       behavior: 'smooth'
     });
   };
-  
-  var linkDownButton = document.querySelector(`.intro__link-down`);
-  var advantagesSection = document.querySelector(`.advantages`);
+
+  var linkDownButton = document.querySelector('.intro__link-down');
+  var introButton = document.querySelector('.intro__button');
+  var advantagesSection = document.querySelector('.advantages');
+
   linkDownButton.addEventListener(`click`, function (evt) {
     evt.preventDefault();
     smoothScroll(advantagesSection);
   });
 
-  var introButton = document.querySelector(`.intro__button`);
-  var questionFormSection = document.querySelector(`.question-form`);
-  introButton.addEventListener(`click`, function (evt) {
+  introButton.addEventListener('click', function (evt) {
     evt.preventDefault();
     smoothScroll(questionFormSection);
   });
 
-
-
+/*открытие-закрытие попапа, localStorage, блокировка скролла*/
   function getBodyScrollTop() {
     return self.pageYOffset || (document.documentElement && document.documentElement.ScrollTop) || (document.body && document.body.scrollTop);
   }
 
   try {
-    storageName = localStorage.getItem("inputName");
-    storageTel = localStorage.getItem('inputTel');
-    storageMessage = localStorage.getItem('inputMessage');
+    storageName = localStorage.getItem('callBackName');
+    storageTel = localStorage.getItem('callBackTel');
+    storageMessage = localStorage.getItem('callBackMessage');
   } catch (err) {
     isStorageSupport = false;
   }
@@ -76,22 +90,22 @@ var ENTER_KEYCODE = 13;
     overlay.classList.remove('hidden');
     callBackPopup.classList.remove('hidden');
     body.dataset.scrollY = getBodyScrollTop();
-    body.style.top = `-${body.dataset.scrollY}px`;
+    body.style.top = '-${body.dataset.scrollY}px';
     body.classList.add('body-lock');
-    inputName.focus();
+    callBackName.focus();
 
     if (storageName) {
-      inputName.value = storageName;
+      callBackName.value = storageName;
     }
 
     if (storageTel) {
-      inputTel.value = storageTel;
+      callBackTel.value = storageTel;
     }
 
     if (storageMessage) {
-      inputMessage.value = storageMessage
+      callBackMessage.value = storageMessage
     }
-    
+
     document.addEventListener('keydown', onEscButtonPress);
   }
 
@@ -125,60 +139,54 @@ var ENTER_KEYCODE = 13;
 
   callBackForm.addEventListener('submit', function () {
     if (isStorageSupport) {
-      localStorage.setItem('inputName', inputName.value);
-      localStorage.setItem('inputTel', inputTel.value);
-      localStorage.setItem('inputMessage', inputMessage.value);
-    } 
+      localStorage.setItem('callBackName', callBackName.value);
+      localStorage.setItem('callBackTel', callBackTel.value);
+      localStorage.setItem('callBackMessage', callBackMessage.value);
+    }
   })
 
+  /*аккордеон */
 
-  /*Маска
-  window.iMaskJS(inputTel, {mask: '+{7}(000)000-00-00'});*/
-  
- /*аккордеон */
+  var siteMapButton = document.querySelector('.site-map__show-button');
+  var contactsButton = document.querySelector('.footer-contacts__show-button');
+  var siteMapList = document.querySelector('.site-map__nav');
+  var contactsList = document.querySelector('.footer-contacts__list');
+  var siteMapSection = document.querySelector('.page-footer__site-map');
+  var footerContactsSection = document.querySelector('.page-footer__contacts');
 
- var siteMapButton = document.querySelector('.site-map__show-button');
- var contactsButton = document.querySelector('.footer-contacts__show-button');
- var siteMapList = document.querySelector('.site-map__nav');
- var contactsList = document.querySelector('.footer-contacts__list');
- 
- var isSiteMapListOpen = false;
- var isContactsListOpen = false;
+  var isSiteMapListOpen = false;
+  var isContactsListOpen = false;
 
- var onSiteMapButtonClick = function (evt) {
+  var onSiteMapButtonClick = function (evt) {
 
-   if (isContactsListOpen) {
-    contactsList.classList.add('hidden');
-    contactsButton.classList.remove('page-footer__close-button');
-   }
+    if (isContactsListOpen) {
+      footerContactsSection.classList.add('hidden--mobile');
+      contactsButton.classList.remove('page-footer__close-button');
+    }
 
-  evt.preventDefault();
-  siteMapList.classList.toggle('hidden');
-  siteMapButton.classList.toggle('page-footer__close-button');
-  isSiteMapListOpen = true;
- }
-
- siteMapButton.addEventListener('click', onSiteMapButtonClick);
-
-
-
- var onContactsButtonClick = function (evt) {
-
-  if (isSiteMapListOpen) {
-    siteMapList.classList.add('hidden');
-    siteMapButton.classList.remove('page-footer__close-button');
+    evt.preventDefault();
+    siteMapSection.classList.toggle('hidden--mobile');
+    siteMapButton.classList.toggle('page-footer__close-button');
+    isSiteMapListOpen = true;
   }
-  evt.preventDefault();
-  contactsList.classList.toggle('hidden');
-  contactsButton.classList.toggle('page-footer__close-button');
-  isContactsListOpen = true;
- }
 
- contactsButton.addEventListener('click', onContactsButtonClick);
+  siteMapSection.classList.remove('opened--mobile');
+  siteMapButton.addEventListener('click', onSiteMapButtonClick);
 
+  var onContactsButtonClick = function (evt) {
 
+    if (isSiteMapListOpen) {
+      siteMapSection.classList.add('hidden--mobile');
+      siteMapButton.classList.remove('page-footer__close-button');
+    }
 
+    evt.preventDefault();
+    footerContactsSection.classList.toggle('hidden--mobile');
+    contactsButton.classList.toggle('page-footer__close-button');
+    isContactsListOpen = true;
+  }
 
-
+  footerContactsSection.classList.remove('opened--mobile');
+  contactsButton.addEventListener('click', onContactsButtonClick);
 
 }) ();
