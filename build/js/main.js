@@ -24,7 +24,7 @@ var ENTER_KEYCODE = 13;
   var storageTel = '';
   var storageMessage = '';
 
-  /*маска*/
+  /* маска*/
   callBackTel.addEventListener('focus', function () {
     callBackTel.value = '+7(';
   });
@@ -36,7 +36,7 @@ var ENTER_KEYCODE = 13;
   window.iMaskJS(callBackTel, {mask: '+{7}(000)000-00-00'});
   window.iMaskJS(questionFormTel, {mask: '+{7}(000)000-00-00'});
 
-  /*плавный скролл*/
+  /* плавный скролл*/
   var smoothScroll = function (element) {
     var elementPosition = element.getBoundingClientRect().top;
     window.scrollTo({
@@ -59,10 +59,10 @@ var ENTER_KEYCODE = 13;
     smoothScroll(questionFormSection);
   });
 
-/*открытие-закрытие попапа, localStorage, блокировка скролла*/
+  /* открытие-закрытие попапа, localStorage, блокировка скролла*/
   function getBodyScrollTop() {
     return self.pageYOffset || (document.documentElement && document.documentElement.ScrollTop) || (document.body && document.body.scrollTop);
-  };
+  }
 
   try {
     storageName = localStorage.getItem('callBackName');
@@ -76,7 +76,7 @@ var ENTER_KEYCODE = 13;
     overlay.classList.add('hidden');
     callBackPopup.classList.add('hidden');
     body.classList.remove('body-lock');
-    window.scrollTo(0,body.dataset.scrollY);
+    window.scrollTo(0, body.dataset.scrollY);
     document.removeEventListener('keydown', onEscButtonPress);
   };
 
@@ -103,7 +103,7 @@ var ENTER_KEYCODE = 13;
     }
 
     if (storageMessage) {
-      callBackMessage.value = storageMessage
+      callBackMessage.value = storageMessage;
     }
 
     document.addEventListener('keydown', onEscButtonPress);
@@ -145,12 +145,10 @@ var ENTER_KEYCODE = 13;
     }
   });
 
-  /*аккордеон */
+  /* аккордеон */
 
   var siteMapButton = document.querySelector('.site-map__show-button');
   var contactsButton = document.querySelector('.footer-contacts__show-button');
-  var siteMapList = document.querySelector('.site-map__nav');
-  var contactsList = document.querySelector('.footer-contacts__list');
   var siteMapSection = document.querySelector('.page-footer__site-map');
   var footerContactsSection = document.querySelector('.page-footer__contacts');
 
@@ -189,4 +187,4 @@ var ENTER_KEYCODE = 13;
   footerContactsSection.classList.remove('opened--mobile');
   contactsButton.addEventListener('click', onContactsButtonClick);
 
-}) ();
+})();
