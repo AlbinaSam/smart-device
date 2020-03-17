@@ -29,6 +29,12 @@
   background-position: center;
   border: none;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+    transition: 0.5s;
+  }
 }
 
 .callback-popup__title {
@@ -95,6 +101,7 @@
   font-size: 14px;
   line-height: 16px;
   opacity: 0.8;
+  cursor: pointer;
 
   &::before {
     content: "";
@@ -105,15 +112,16 @@
     height: 14px;
     border: 1px solid $white-color;
   }
-
-  &:hover,
-  &:focus {
-    opacity: 1;
-  }
 }
 
 .callback-popup input[id="popup-consent"]:checked + label::before {
   background-image: url("../../img/check-mark.svg");
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.callback-popup input[id="popup-consent"]:focus + label,
+.callback-popup input[id="popup-consent"]:hover + label {
+  opacity: 1;
+  transition: 0.5s;
 }

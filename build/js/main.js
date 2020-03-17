@@ -49,7 +49,7 @@ var ENTER_KEYCODE = 13;
   var introButton = document.querySelector('.intro__button');
   var advantagesSection = document.querySelector('.advantages');
 
-  linkDownButton.addEventListener(`click`, function (evt) {
+  linkDownButton.addEventListener('click', function (evt) {
     evt.preventDefault();
     smoothScroll(advantagesSection);
   });
@@ -62,7 +62,7 @@ var ENTER_KEYCODE = 13;
 /*открытие-закрытие попапа, localStorage, блокировка скролла*/
   function getBodyScrollTop() {
     return self.pageYOffset || (document.documentElement && document.documentElement.ScrollTop) || (document.body && document.body.scrollTop);
-  }
+  };
 
   try {
     storageName = localStorage.getItem('callBackName');
@@ -78,13 +78,13 @@ var ENTER_KEYCODE = 13;
     body.classList.remove('body-lock');
     window.scrollTo(0,body.dataset.scrollY);
     document.removeEventListener('keydown', onEscButtonPress);
-  }
+  };
 
   var onEscButtonPress = function (evt) {
     if (evt.keyCode === ESC_KEYCODE) {
       closePopup();
     }
-  }
+  };
 
   var openPopup = function () {
     overlay.classList.remove('hidden');
@@ -107,7 +107,7 @@ var ENTER_KEYCODE = 13;
     }
 
     document.addEventListener('keydown', onEscButtonPress);
-  }
+  };
 
   callBackButton.addEventListener('click', function (evt) {
     evt.preventDefault();
@@ -143,7 +143,7 @@ var ENTER_KEYCODE = 13;
       localStorage.setItem('callBackTel', callBackTel.value);
       localStorage.setItem('callBackMessage', callBackMessage.value);
     }
-  })
+  });
 
   /*аккордеон */
 
@@ -168,7 +168,7 @@ var ENTER_KEYCODE = 13;
     siteMapSection.classList.toggle('hidden--mobile');
     siteMapButton.classList.toggle('page-footer__close-button');
     isSiteMapListOpen = true;
-  }
+  };
 
   siteMapSection.classList.remove('opened--mobile');
   siteMapButton.addEventListener('click', onSiteMapButtonClick);
@@ -184,7 +184,7 @@ var ENTER_KEYCODE = 13;
     footerContactsSection.classList.toggle('hidden--mobile');
     contactsButton.classList.toggle('page-footer__close-button');
     isContactsListOpen = true;
-  }
+  };
 
   footerContactsSection.classList.remove('opened--mobile');
   contactsButton.addEventListener('click', onContactsButtonClick);

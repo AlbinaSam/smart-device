@@ -13,14 +13,18 @@
 
 .page-footer__top-part {
   @include flex-col;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
   width: 15%;
   margin-right: 14.7%;
 }
 
+.page-footer__logo-link {
+  margin-bottom: 50px;
+}
+
 .page-footer__middle-part {
-  width: 70.3%;
   @include flex-row;
+  width: 70.3%;
 }
 
 .page-footer__title {
@@ -109,7 +113,6 @@
 }
 
 @media (max-width: $tablet-width) {
-
   .page-footer__top-middle-container {
     @include flex-col;
     position: relative;
@@ -130,10 +133,14 @@
   .page-footer__top-part {
     @include flex-row;
     align-items: center;
+    justify-content: space-between;
     width: 94%;
-    margin-right: 0;
     margin: 0 auto;
     padding: 19px 0 22px;
+  }
+
+  .page-footer__logo-link {
+    margin-bottom: 0;
   }
 
   .page-footer__copyright--tab-desk {
@@ -170,7 +177,6 @@
 }
 
 @media (max-width: $mobile-width) {
-
   .page-footer__top-middle-container::before {
     top: 260px;
   }

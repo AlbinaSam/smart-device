@@ -1,6 +1,10 @@
 body {
   min-width: 320px;
   font-family: "PT Mono", "Courier", monospace;
+  /*background-image: url("../img/шапка.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  opacity: 0.5;*/
 }
 
 img {
@@ -47,7 +51,6 @@ input[type="radio"].visually-hidden {
 }
 
 @media (max-width: $mobile-width) {
-
   .hidden--mobile .site-map__nav {
     display: none;
   }
@@ -68,5 +71,3 @@ input[type="radio"].visually-hidden {
     display: none;
   }
 }
-
-

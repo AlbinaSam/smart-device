@@ -69,29 +69,28 @@
 }
 
 .goods__item--production a::before {
-  background-image: url("../../img/product1-desk.png");
+  background-image: url("../../img/product1-desk.jpg");
 }
 
 .goods__item--assembling a::before {
-  background-image: url("../../img/product2-desk.png");
+  background-image: url("../../img/product2-desk.jpg");
 }
 
 .goods__item--components a::before {
-  background-image: url("../../img/product3-desk.png");
+  background-image: url("../../img/product3-desk.jpg");
 }
 
 @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-
   .goods__item--production a::before {
-    background-image: url("../../img/product1-desk@2x.png");
+    background-image: url("../../img/product1-desk@2x.jpg");
   }
 
   .goods__item--assembling a::before {
-    background-image: url("../../img/product2-desk@2x.png");
+    background-image: url("../../img/product2-desk@2x.jpg");
   }
 
   .goods__item--components a::before {
-    background-image: url("../../img/product3-desk@2x.png");
+    background-image: url("../../img/product3-desk@2x.jpg");
   }
 }
 
@@ -106,7 +105,6 @@
 }
 
 @media (max-width: $tablet-width) {
-
   .goods {
     padding: 50px 0 30px;
   }
@@ -140,35 +138,33 @@
   }
 
   .goods__item--production a::before {
-    background-image: url("../../img/product1-tablet.png");
+    background-image: url("../../img/product1-tablet.jpg");
   }
 
   .goods__item--assembling a::before {
-    background-image: url("../../img/product2-tablet.png");
+    background-image: url("../../img/product2-tablet.jpg");
   }
 
   .goods__item--components a::before {
-    background-image: url("../../img/product3-tablet.png");
+    background-image: url("../../img/product3-tablet.jpg");
   }
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-
     .goods__item--production a::before {
-      background-image: url("../../img/product1-tablet@2x.png");
+      background-image: url("../../img/product1-tablet@2x.jpg");
     }
 
     .goods__item--assembling a::before {
-      background-image: url("../../img/product2-tablet@2x.png");
+      background-image: url("../../img/product2-tablet@2x.jpg");
     }
 
     .goods__item--components a::before {
-      background-image: url("../../img/product3-tablet@2x.png");
+      background-image: url("../../img/product3-tablet@2x.jpg");
     }
   }
 }
 
 @media (max-width: $mobile-width) {
-
   .goods {
     padding: 49px 0 35px;
   }
@@ -190,29 +186,28 @@
   }
 
   .goods__item--production a::before {
-    background-image: url("../../img/product1-mobile.png");
+    background-image: url("../../img/product1-mobile.jpg");
   }
 
   .goods__item--assembling a::before {
-    background-image: url("../../img/product2-mobile.png");
+    background-image: url("../../img/product2-mobile.jpg");
   }
 
   .goods__item--components a::before {
-    background-image: url("../../img/product3-mobile.png");
+    background-image: url("../../img/product3-mobile.jpg");
   }
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-
     .goods__item--production a::before {
-      background-image: url("../../img/product1-mobile@2x.png");
+      background-image: url("../../img/product1-mobile@2x.jpg");
     }
 
     .goods__item--assembling a::before {
-      background-image: url("../../img/product2-mobile@2x.png");
+      background-image: url("../../img/product2-mobile@2x.jpg");
     }
 
     .goods__item--components a::before {
-      background-image: url("../../img/product3-mobile@2x.png");
+      background-image: url("../../img/product3-mobile@2x.jpg");
     }
   }
 }

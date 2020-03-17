@@ -33,12 +33,6 @@
   margin-bottom: 21px;
 }
 
-.about__text {
-  max-height: 152px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
 .about__text p {
   margin: 0;
   margin-bottom: 20px;
@@ -73,7 +67,6 @@
 }
 
 @media (max-width: $tablet-width) {
-
   .about {
     padding-bottom: 83px;
   }
@@ -104,10 +97,6 @@
     line-height: 45px;
   }
 
-  .about__text {
-    max-height: 200px;
-  }
-
   .about__button {
     margin-top: 37px;
   }
@@ -130,10 +119,6 @@
     margin-bottom: 22px;
     font-size: 28px;
     line-height: 39px;
-  }
-
-  .about__text {
-    max-height: 350px;
   }
 
   .about__text p {

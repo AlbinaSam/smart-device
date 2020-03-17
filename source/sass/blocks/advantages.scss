@@ -82,7 +82,7 @@
     width: 47.9%;
     min-height: 232px;
     margin-bottom: 30px;
-    padding: 24px 30px 20px 26px;
+    padding: 24px 19px 20px 26px;
 
     &:nth-child(odd) {
       margin-right: 4%;
@@ -126,6 +126,6 @@
   }
 
   .advantages__item-description br {
-      display: block;
+    display: block;
   }
 }

@@ -106,11 +106,6 @@
     height: 14px;
     border: 1px solid $white-color;
   }
-
-  &:hover,
-  &:focus {
-    opacity: 1;
-  }
 }
 
 .question-form input[id="consent"]:checked + label::before {
@@ -119,8 +114,13 @@
   background-position: center;
 }
 
-@media (max-width: $tablet-width) {
+.question-form input[id="consent"]:focus + label,
+.question-form input[id="consent"]:hover + label {
+  opacity: 1;
+  transition: 0.5s;
+}
 
+@media (max-width: $tablet-width) {
   .question-form {
     background-image: none;
   }
@@ -199,6 +199,7 @@
     width: 100%;
     margin-bottom: 32px;
   }
+
   .question-form textarea {
     min-height: 104px;
     margin-bottom: 32px;
@@ -217,9 +218,6 @@
 
   .question-form label[for="consent"] {
     width: 100%;
-  }
-
-  .question-form label[for="consent"] {
     padding-left: 33px;
 
     &::before {
