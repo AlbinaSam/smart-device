@@ -1,5 +1,5 @@
 .goods {
-  padding: 87px 0 127px;
+  padding: 87px 0 81px;
   background-color: #1b2d37;
   color: $white-color;
 }
@@ -19,7 +19,7 @@
   width: 31.6%;
   height: 620px;
   margin-right: 2.6%;
-  background-color: $white-color;
+  margin-bottom: 46px;
 
   &:nth-child(3n) {
     margin-right: 0;
@@ -44,6 +44,7 @@
     top: 0;
     width: 100%;
     height: 100%;
+    background-color: $white-color;
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 0.2;
@@ -125,7 +126,6 @@
     width: 100%;
     height: 256px;
     margin-right: 0;
-    margin-bottom: 46px;
   }
 
   .goods__item a {
