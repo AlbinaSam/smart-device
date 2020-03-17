@@ -47,23 +47,23 @@ input[type="radio"].visually-hidden {
 }
 
 @media (max-width: $mobile-width) {
-  .hidden--mobile .site-map__nav {
+  .page-footer__hidden-mobile .site-map__nav {
     display: none;
   }
 
-  .opened--mobile .site-map__nav {
+  .page-footer__opened-mobile .site-map__nav {
     display: block;
   }
 
-  .hidden--mobile .footer-contacts__list {
+  .page-footer__hidden-mobile .footer-contacts__list {
     display: none;
   }
 
-  .opened--mobile .footer-contacts__list {
+  .page-footer__opened-mobile .footer-contacts__list {
     display: block;
   }
 
-  .opened--mobile .page-footer__show-button {
+  .page-footer__opened-mobile .page-footer__show-button {
     display: none;
   }
 }

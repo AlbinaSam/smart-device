@@ -158,33 +158,33 @@ var ENTER_KEYCODE = 13;
   var onSiteMapButtonClick = function (evt) {
 
     if (isContactsListOpen) {
-      footerContactsSection.classList.add('hidden--mobile');
+      footerContactsSection.classList.add('page-footer__hidden-mobile');
       contactsButton.classList.remove('page-footer__close-button');
     }
 
     evt.preventDefault();
-    siteMapSection.classList.toggle('hidden--mobile');
+    siteMapSection.classList.toggle('page-footer__hidden-mobile');
     siteMapButton.classList.toggle('page-footer__close-button');
     isSiteMapListOpen = true;
   };
 
-  siteMapSection.classList.remove('opened--mobile');
+  siteMapSection.classList.remove('page-footer__opened-mobile');
   siteMapButton.addEventListener('click', onSiteMapButtonClick);
 
   var onContactsButtonClick = function (evt) {
 
     if (isSiteMapListOpen) {
-      siteMapSection.classList.add('hidden--mobile');
+      siteMapSection.classList.add('page-footer__hidden-mobile');
       siteMapButton.classList.remove('page-footer__close-button');
     }
 
     evt.preventDefault();
-    footerContactsSection.classList.toggle('hidden--mobile');
+    footerContactsSection.classList.toggle('page-footer__hidden-mobile');
     contactsButton.classList.toggle('page-footer__close-button');
     isContactsListOpen = true;
   };
 
-  footerContactsSection.classList.remove('opened--mobile');
+  footerContactsSection.classList.remove('page-footer__opened-mobile');
   contactsButton.addEventListener('click', onContactsButtonClick);
 
 })();

@@ -16,14 +16,14 @@
     top: 4px;
     width: 178px;
     height: 317px;
-    background-image: url("../../img/year.png");
+    background-image: url("../img/year.png");
     background-repeat: no-repeat;
   }
 }
 
 @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
   .about__container::before {
-    background-image: url("../../img/year@2x.png");
+    background-image: url("../img/year@2x.png");
     background-size: 220px auto;
   }
 }
@@ -80,13 +80,13 @@
       top: -2px;
       width: 189px;
       height: 361px;
-      background-image: url("../../img/year-tablet.png");
+      background-image: url("../img/year-tablet.png");
     }
   }
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     .about__container::before {
-      background-image: url("../../img/year-tablet@2x.png");
+      background-image: url("../img/year-tablet@2x.png");
       background-size: 244px auto;
     }
   }

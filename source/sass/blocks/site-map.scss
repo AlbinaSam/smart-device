@@ -11,6 +11,18 @@
 
 .site-map__item a {
   @include link-mixin;
+  position: relative;
+
+  &:hover::after,
+  &:focus::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $footer-font-color;
+  }
 }
 
 .site-map__list--left {

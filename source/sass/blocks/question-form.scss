@@ -2,8 +2,8 @@
   color: $white-color;
   background-color: $blue-color;
   background-image:
-    url("../../img/airplane.png"),
-    url("../../img/triangles-desk.png");
+    url("../img/airplane.png"),
+    url("../img/triangles-desk.png");
   background-repeat: no-repeat;
   background-size: auto, auto;
   background-position: calc(71% - 650px) 160px, right 855px top -177px;
@@ -12,8 +12,8 @@
 @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
   .question-form {
     background-image:
-      url("../../img/airplane@2x.png"),
-      url("../../img/triangles-desk@2x.png");
+      url("../img/airplane@2x.png"),
+      url("../img/triangles-desk@2x.png");
     background-size: 511px auto, 1920px auto;
   }
 }
@@ -42,7 +42,7 @@
   @include flex-col;
 }
 
-.form__data-row {
+.question-form__data-row {
   @include flex-row;
   justify-content: space-between;
   margin-bottom: 40px;
@@ -62,7 +62,7 @@
   resize: none;
 }
 
-.form__submit-row {
+.question-form__submit-row {
   @include flex-row;
   justify-content: space-between;
   align-items: center;
@@ -109,7 +109,7 @@
 }
 
 .question-form input[id="consent"]:checked + label::before {
-  background-image: url("../../img/check-mark.svg");
+  background-image: url("../img/check-mark.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -188,7 +188,7 @@
     margin-bottom: 25px;
   }
 
-  .form__data-row {
+  .question-form__data-row {
     @include flex-col;
     justify-content: flex-start;
     margin-bottom: 0;
@@ -205,7 +205,7 @@
     margin-bottom: 32px;
   }
 
-  .form__submit-row {
+  .question-form__submit-row {
     @include flex-col;
     justify-content: flex-start;
     align-items: flex-start;

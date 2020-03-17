@@ -1,9 +1,9 @@
 .page-main {
   background-image:
-    url("../../img/tr-big-left.svg"),
-    url("../../img/tr-big-center.svg"),
-    url("../../img/tr-small-left.svg"),
-    url("../../img/tr-small-right.svg");
+    url("../img/tr-big-left.svg"),
+    url("../img/tr-big-center.svg"),
+    url("../img/tr-small-left.svg"),
+    url("../img/tr-small-right.svg");
 
   background-repeat: no-repeat;
   background-position:
@@ -21,8 +21,7 @@
 
 @media (max-width: $tablet-width) {
   .page-main {
-    background-image: url("../../img/tr-tablet.svg");
-
+    background-image: url("../img/tr-tablet.svg");
     background-position: right top 90px;
   }
 

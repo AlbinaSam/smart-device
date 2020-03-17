@@ -42,14 +42,14 @@
   left: 0;
   width: 19px;
   height: 14px;
-  background-image: url("../../img/envelope.svg");
+  background-image: url("../img/envelope.svg");
 }
 
 .header-contacts__item--phone a::before {
   left: 7px;
   width: 18px;
   height: 18px;
-  background-image: url("../../img/phone-call.svg");
+  background-image: url("../img/phone-call.svg");
 }
 
 @media (max-width: $tablet-width) {

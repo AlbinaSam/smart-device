@@ -13,7 +13,6 @@
 
 .page-footer__top-part {
   @include flex-col;
-  /*justify-content: space-between;*/
   width: 15%;
   margin-right: 14.7%;
 }
@@ -143,6 +142,10 @@
     margin-bottom: 0;
   }
 
+  .page-footer__copyright {
+    display: none;
+  }
+
   .page-footer__copyright--tab-desk {
     @include footer-font;
     display: block;
@@ -169,10 +172,6 @@
 
   .page-footer__bottom-container {
     width: 94%;
-  }
-
-  .page-footer__copyright {
-    display: none;
   }
 }
 
@@ -249,14 +248,14 @@
     font-size: 0;
     border: none;
     background-color: transparent;
-    background-image: url("../../img/plus.svg");
+    background-image: url("../img/plus.svg");
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
   }
 
   .page-footer__close-button {
-    background-image: url("../../img/minus.svg");
+    background-image: url("../img/minus.svg");
   }
 
   .page-footer__bottom-part {

@@ -45,10 +45,6 @@
   font-size: 16px;
   line-height: 22px;
   color: #666666;
-
-  br {
-    display: none;
-  }
 }
 
 .advantages__item:hover {
@@ -107,7 +103,7 @@
   .advantages__item {
     width: 100%;
     margin-bottom: 20px;
-    padding: 24px 12px 23px 22px;
+    padding: 24px 13px 23px 22px;
 
     &:nth-child(odd) {
       margin-right: 0;
@@ -123,9 +119,5 @@
     margin-bottom: 10px;
     font-size: 20px;
     line-height: 28px;
-  }
-
-  .advantages__item-description br {
-    display: block;
   }
 }
