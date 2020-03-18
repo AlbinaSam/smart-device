@@ -2,6 +2,17 @@
   @include flex-row;
 }
 
+.site-map__title {
+  margin: 0;
+  margin-bottom: 24px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 16px;
+  font-weight: normal;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
 .site-map__list {
   @include list-mixin;
   font-size: 15px;
@@ -53,7 +64,15 @@
 
 @media (max-width: $mobile-width) {
   .site-map {
+    /*padding-top: 29px;*/
+    padding-top: 0;
+  }
+
+  .site-map__title {
+    /*margin-bottom: 27px;*/
     padding-top: 29px;
+    padding-bottom: 27px;
+    margin-bottom: 0;
   }
 
   .site-map__nav {

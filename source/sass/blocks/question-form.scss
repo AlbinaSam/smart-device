@@ -94,7 +94,7 @@
   padding-left: 40px;
   font-size: 14px;
   line-height: 16px;
-  opacity: 0.8;
+  color: rgba(255, 255, 255, 0.8);
   cursor: pointer;
 
   &::before {
@@ -116,7 +116,7 @@
 
 .question-form input[id="consent"]:focus + label,
 .question-form input[id="consent"]:hover + label {
-  opacity: 1;
+  color: rgba(255, 255, 255, 1);
   transition: 0.5s;
 }
 

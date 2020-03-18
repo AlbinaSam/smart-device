@@ -1,3 +1,14 @@
+.footer-contacts__title {
+  margin: 0;
+  margin-bottom: 24px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 16px;
+  font-weight: normal;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
 .footer-contacts__list {
   @include list-mixin;
   font-size: 15px;
@@ -23,7 +34,13 @@
 
 @media (max-width: $mobile-width) {
   .footer-contacts {
+    padding-top: 0;
+  }
+
+  .footer-contacts__title {
     padding-top: 29px;
+    padding-bottom: 27px;
+    margin-bottom: 0;
   }
 
   .footer-contacts__list {

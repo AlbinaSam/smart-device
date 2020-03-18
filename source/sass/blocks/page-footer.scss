@@ -26,17 +26,6 @@
   width: 70.3%;
 }
 
-.page-footer__title {
-  margin: 0;
-  margin-bottom: 24px;
-  font-family: "Roboto Condensed", "Arial", sans-serif;
-  font-size: 15px;
-  line-height: 16px;
-  font-weight: normal;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-
 .page-footer__copyright--tab-desk {
   display: none;
 }
@@ -233,14 +222,10 @@
     margin: 0 auto;
   }
 
-  .page-footer__title {
-    margin-bottom: 27px;
-  }
-
   .page-footer__show-button {
     position: absolute;
     right: 0;
-    top: 0;
+    top: 30px;
     display: block;
     width: 16px;
     height: 16px;
